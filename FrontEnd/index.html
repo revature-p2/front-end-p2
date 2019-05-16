@@ -33,41 +33,6 @@
             $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
         });
     </script>
-    <!-- Storage -->
-    <div id="result"></div>
-    <script>
-        if (typeof (Storage) !== "undefined") {
-            // Store the data:!!
-            localStorage.username = "username";
-            localStorage.password = "password";
-            localStorage.email = "email";
-            // Retrieve the data!!
-            document.getElementById("result").innerHTML = localStorage.username;
-            document.getElementById("result").innerHTML = localStorage.password;
-            document.getElementById("result").innerHTML = localStorage.email;
-        } else {
-            document.getElementById("result").innerHTML = "No can do baby-doll, your browser does not support Web Storage...";
-        }
-    </script>
-    
-    <script>
-        function create(form) {
-            if (form.registration.value == "username" && form.registration.value == "password" && form.registration.value == "email") {
-                window.open("app.html")
-            }
-            else {
-                alert("Error: Incorrect/Missing Username, Password, or Email")
-            }
-        };
-
-        function login(form) {
-            if (form.login-form.value == "username" && form.login-form.value == "password") {
-                window.open("app.html")
-            }
-            else {
-                alert("Error: Incorrect/Missing Username or Password")
-            }
-        };
-    </script>
+    <script src="verification.js"> </script>
 </body>
 </html>
