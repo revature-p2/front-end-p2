@@ -9,6 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "azure": "^2.3.1-preview",
+    "azure-arm-cosmosdb": "^2.3.0",
+    "azure-arm-network": "^13.0.0",
+    "azure-arm-sql": "^5.7.0",
+    "azure-arm-website": "^5.7.0",
+    "azure-asm-sql": "^0.10.3",
+    "azure-asm-storage": "^0.12.1",
     "express": "^4.16.4",
     "nodemon": "^1.19.0",
     "shelljs": "^0.8.3"

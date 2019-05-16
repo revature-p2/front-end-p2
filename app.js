@@ -1,17 +1,15 @@
-var exec = require("child_process").exec;
-const app = require("express");
-
-const http = require('http');
-
+const express = require ("express");
+const app = express();
 const hostname = 'localhost';
 const port = 8080;
+const path = require ('path');
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('/FrontEnd/index.html');
+app.listen(port, hostname, () => {
+  console.log(`Server running up and running at localhost:8080`);
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running up and running at localhost:8080`);
+app.use(express.static('C:/revature/revature-p2/FrontEnd/'));
+
+app.get('/', (req,res) =>{
+  res.sendFile(path.join(__dirname + `/FrontEnd/index.html`))
 });
