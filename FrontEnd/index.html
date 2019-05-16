@@ -13,30 +13,26 @@
     <div class="login">
         <div class="form">
             <form class="registration">
-                <input type="text" placeholder="username" />
-                <input type="password" placeholder="password" />
-                <input type="text" placeholder="email" />
-                <button>Create</button>
-                <p class="message">Already a member? <a href="#"> Login</a>
-                </p>
+                <input type="text" placeholder="username" value="username" />
+                <input type="password" placeholder="password" value="password" />
+                <input type="text" placeholder="email" value="email" />
+                <button onclick="create(form)">Create</button>
+                <p class="message">Already a member? <a href="#"> Login</a></p>
             </form>
             <form class="login-form">
-                <input type="text" placeholder="username" />
-                <input type="password" placeholder="password" />
-                <button>Log In</button>
-                <p class="message">Not a member? <a href="#"> Sign Up</a>
-                </p>
+                <input type="text" placeholder="username" value="username" />
+                <input type="password" placeholder="password" value="password" />
+                <button onclick="login(form)">Log In</button>
+                <p class="message">Not a member? <a href="#"> Sign Up</a></p>
             </form>
         </div>
     </div>
-    <script src='https://code.jquery.com/jquery-3.2.1.min.js'>
-    </script>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
     <script>
         $('.message a').click(function () {
             $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
         });
     </script>
-
     <!-- Storage -->
     <div id="result"></div>
     <script>
@@ -44,7 +40,7 @@
             // Store the data:!!
             localStorage.username = "username";
             localStorage.password = "password";
-            localStorage.email =    "email";
+            localStorage.email = "email";
             // Retrieve the data!!
             document.getElementById("result").innerHTML = localStorage.username;
             document.getElementById("result").innerHTML = localStorage.password;
@@ -53,7 +49,25 @@
             document.getElementById("result").innerHTML = "No can do baby-doll, your browser does not support Web Storage...";
         }
     </script>
-</body>
-<script src="verification.js" charset="utf-8"></script>
+    
+    <script>
+        function create(form) {
+            if (form.registration.value == "username" && form.registration.value == "password" && form.registration.value == "email") {
+                window.open("app.html")
+            }
+            else {
+                alert("Error: Incorrect/Missing Username, Password, or Email")
+            }
+        };
 
+        function login(form) {
+            if (form.login-form.value == "username" && form.login-form.value == "password") {
+                window.open("app.html")
+            }
+            else {
+                alert("Error: Incorrect/Missing Username or Password")
+            }
+        };
+    </script>
+</body>
 </html>

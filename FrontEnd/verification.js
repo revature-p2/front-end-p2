@@ -1,4 +1,7 @@
+
+
 function check(form) {
+    document.getElementById
     if (form.username.value == "username" && form.password.value == "password" && form.email.value == "email") {
         window.open('app.html')
     }
