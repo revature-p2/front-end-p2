@@ -1,4 +1,3 @@
-const shell = require('./shellHelper');
 const express = require ("express");
 const app = express();
 const hostname = 'localhost';
@@ -17,6 +16,6 @@ app.get('/', (req,res) =>{
 });
 
 // execute a single shell command
-shell.exec('npm test --coverage', function(err){
-    console.log('executed test');
-});
+//shell.exec('npm test --coverage', function(err){
+ //   console.log('executed test');
+//});
