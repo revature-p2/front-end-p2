@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OUR Chicken Cloud</title>
+    <style>
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+        .active,
+        .collapsible:hover {
+            background-color: #555;
+        }
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body style="background-image: url(/css/Ciel.jpg); height: 100%; background-size: cover">
+    <div class="container">
+        <center>
+            <h1 style="color:black;font-size:40px;text-shadow: black">
+                <strong style="color:orangered;font-size:50px;font:bold;font-family: Cambria, Cochin, serif">
+                    OUR Chicken Cloud Services
+                </strong>
+                <h0>_______________________________________________________________ </h0>
+
+                <!--VM -->
+                <form action="" method="GET">
+                    Build a Virtual Machine
+                    <div class="createvm">
+                        <span class="collapsible">Build VM</span>
+                        <p class="content" style="background-color: #ffffff;
+                        border: 1px solid black;
+                        opacity: 0.5; border: 2px solid black;
+                        margin: 50px; font-weight: bold; color: black;">
+                            <form action="">
+                                <input type="checkbox" name="VM" value="vmproperty0">Property 0<br>
+                                <input type="checkbox" name="VM" value="vmproperty1">Property 1<br>
+                                <input type="checkbox" name="VM" value="vmproperty2">Property 2<br>
+                                <input type="button" onclick="myFunction()" value="Review VM">
+                                <input type="reset">
+                                <br>
+                                <input type="text" id="createVM" size="200">
+                                <h0>__________________________________________________________________ </h0>
+                                <br>
+                                <input type="submit" value="Create VM">
+                            </form>
+                        </p>
+                    </div>
+                </form>
+
+                <!-- Directory -->
+                <form action="" method="GET">
+                    Build a Directory
+                    <div class="createdir">
+                        <span class="collapsible">Build directory</span>
+                        <p class="content" style="background-color: #ffffff;
+                        border: 1px solid black;
+                        opacity: 0.5; border: 2px solid black;
+                        margin: 50px; font-weight: bold; color: black;">
+                            <form action="">
+                                <input type="checkbox" name="Dir" value="dirproperty0">Property 0<br>
+                                <input type="checkbox" name="Dir" value="dirproperty1">Property 1<br>
+                                <input type="checkbox" name="Dir" value="dirproperty2">Property 2<br>
+                                <input type="button" onclick="myFunction1()" value="Review Directory">
+                                <input type="reset">
+                                <br>
+                                <input type="text" id="createDir" size="200">
+                                <h0>__________________________________________________________________ </h0>
+                                <br>
+                                <input type="submit" value="Create Directory">
+                            </form>
+                        </p>
+                    </div>
+                </form>
+
+                <!-- Web App -->
+                <form action="" method="GET">
+                    Build a Web App
+                    <div class="createwebapp">
+                        <span class="collapsible">Build Webapp</span>
+                        <p class="content" style="background-color: #ffffff;
+                        border: 1px solid black;
+                        opacity: 0.5; border: 2px solid black;
+                        margin: 50px; font-weight: bold; color: black;">
+                            <form action="">
+                                <input type="checkbox" name="Webapp" value="webappproperty0">Property 0<br>
+                                <input type="checkbox" name="Webapp" value="webappproperty1">Property 1<br>
+                                <input type="checkbox" name="Webapp" value="webappproperty2">Property 2<br>
+                                <input type="button" onclick="myFunction2()" value="Review WebApp">
+                                <input type="reset">
+                                <br>
+                                <input type="text" id="createWebapp" size="200">
+                                <h0>__________________________________________________________________ </h0>
+                                <br>
+                                <input type="submit" value="Create WebApp">
+                            </form>
+                        </p>
+                    </div>
+                </form>
+
+                <!-- Storage -->
+                <form action="" method="GET">
+                    Build Blob Storage
+                    <div class="createblob">
+                        <span class="collapsible">Build Storage</span>
+                        <p class="content" style="background-color: #ffffff;
+                        border: 1px solid black;
+                        opacity: 0.5; border: 2px solid black;
+                        margin: 50px; font-weight: bold; color: black;">
+                            <form action="">
+                                <input type="checkbox" name="Blob" value="storageproperty0">Property 0<br>
+                                <input type="checkbox" name="Blob" value="storageproperty1">Property 1<br>
+                                <input type="checkbox" name="Blob" value="storageproperty2">Property 2<br>
+                                <input type="button" onclick="myFunction3()" value="Review Storage">
+                                <input type="reset">
+                                <br>
+                                <input type="text" id="createBlob" size="200">
+                                <h0>__________________________________________________________________ </h0>
+                                <br>
+                                <input type="submit" value="Create Storage">
+                            </form>
+                        </p>
+                    </div>
+                </form>
+
+                <!-- SQL Database -->
+                <form action="" method="GET">
+                    Build a SQL database
+                    <div class="createsql">
+                        <span class="collapsible">Build MySQL-DB</span>
+                        <p class="content" style="background-color: #ffffff;
+                        border: 1px solid black;
+                        opacity: 0.5; border: 2px solid black;
+                        margin: 50px; font-weight: bold; color: black;">
+                            <form action="">
+                                <input type="checkbox" name="SQL" value="SQLproperty0">Property 0<br>
+                                <input type="checkbox" name="SQL" value="SQLproperty1">Property 1<br>
+                                <input type="checkbox" name="SQL" value="SQLproperty2">Property 2<br>
+                                <input type="button" onclick="myFunction4()" value="Review SQL">
+                                <input type="reset">
+                                <br>
+                                <input type="text" id="createSQL" size="200">
+                                <h0>__________________________________________________________________
+                                </h0>
+                                <br>
+                                <input type="submit" value="Create SQL">
+                            </form>
+                        </p>
+                    </div>
+                </form>
+
+                <!-- Cosmos DB -->
+                <form action="" method="GET">
+                    Build a Cosmos Database
+                    <div class="createcosmosDB">
+                        <span class="collapsible">Build CosmosDB</span>
+                        <p class="content" style="background-color: #ffffff;
+                        border: 1px solid black;
+                        opacity: 0.5; border: 2px solid black;
+                        margin: 50px; font-weight: bold; color: black;">
+                            <form action="">
+                                <input type="checkbox" name="CosmosDB" value="CosmosDBproperty0">Property 0<br>
+                                <input type="checkbox" name="CosmosDB" value="CosmosDBproperty1">Property 1<br>
+                                <input type="checkbox" name="CosmosDB" value="CosmosDBproperty2">Property 2<br>
+                                <input type="button" onclick="myFunction5()" value="Review CosmosDB">
+                                <input type="reset">
+                                <br>
+                                <input type="text" id="createCosmosDB" size="200">
+                                <h0>__________________________________________________________________ </h0>
+                                <br>
+                                <input type="submit" value="Create CosmosDB">
+                            </form>
+                        </p>
+                    </div>
+                </form>
+
+                <!-- Private Network -->
+                <form action="" method="GET">
+                    Build a Private Network
+                    <div class="createprivatenetwork">
+                        <span class="collapsible">Build Private Network</span>
+                        <p class="content" style="background-color: #ffffff;
+                        border: 1px solid black;
+                        opacity: 0.5; border: 2px solid black;
+                        margin: 50px; font-weight: bold; color: black;">
+                            <form action="">
+                                <input type="checkbox" name="Privatenetwork" value="privatenetproperty0">Property 0<br>
+                                <input type="checkbox" name="Privatenetwork" value="privatenetproperty1">Property 1<br>
+                                <input type="checkbox" name="Privatenetwork" value="privatenetproperty2">Property 2<br>
+                                <input type="button" onclick="myFunction6()" value="Review Private Network">
+                                <input type="reset">
+                                <br>
+                                <input type="text" id="createPrivatenetwork" size="200">
+                                <h0>__________________________________________________________________
+                                </h0>
+                                <br>
+                                <input type="submit" value="Create Private Network">
+                            </form>
+                        </p>
+                    </div>
+                </form>
+
+                <!-- Public Network -->
+                <form action="" method="GET">
+                    Build a Public Network
+                    <div class="createpublicnetwork">
+                        <span class="collapsible">Build Public Network</span>
+                        <p class="content" style="background-color: #ffffff;
+                        border: 1px solid black;
+                        opacity: 0.5; border: 2px solid black;
+                        margin: 50px; font-weight: bold; color: black;">
+                            <form action="">
+                                <input type="checkbox" name="Publicnetwork" value="publicnetproperty0">Property 0<br>
+                                <input type="checkbox" name="Publicnetwork" value="publicnetproperty1">Property 1<br>
+                                <input type="checkbox" name="Publicnetwork" value="publicnetproperty2">Property 2<br>
+                                <input type="button" onclick="myFunction7()" value="Review Public Network">
+                                <input type="reset">
+                                <br>
+                                <input type="text" id="createPublicnetwork" size="200">
+                                <h0>__________________________________________________________________ </h0>
+                                <br>
+                                <input type="submit" value="Create Public Network">
+                            </form>
+                        </p>
+                    </div>
+                </form>
+            </h1>
+        </center>
+    </div>
+    <h0>________________________________________________________________________________________________________________________________________________________________________
+    </h0>
+
+    <!-- Javascript -->
+    <!-- Collapsible Javascripts -->
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+        //Create VM 
+        function myFunction() {
+            var VM = document.forms[0];
+            var txt = "";
+            var i;
+            for (i = 0; i < VM.length; i++) {
+                if (VM[i].checked) {
+                    txt = txt + VM[i].value + " ";
+                }
+            }
+            document.getElementById("createVM").value = "You Want a VM with: " + txt;
+        }
+        //Create Directory 
+        function myFunction1() {
+            var Dir = document.forms[1];
+            var txt = "";
+            var i;
+            for (i = 0; i < Dir.length; i++) {
+                if (Dir[i].checked) {
+                    txt = txt + Dir[i].value + " ";
+                }
+            }
+            document.getElementById("createDir").value = "You Want a Directory with: " + txt;
+        }
+        //Create Web App 
+        function myFunction2() {
+            var Webapp = document.forms[2];
+            var txt = "";
+            var i;
+            for (i = 0; i < Webapp.length; i++) {
+                if (Webapp[i].checked) {
+                    txt = txt + Webapp[i].value + " ";
+                }
+            }
+            document.getElementById("createWebapp").value = "You Want a Web App with: " + txt;
+        }
+        //Create Blob Storage
+        function myFunction3() {
+            var Blob = document.forms[3];
+            var txt = "";
+            var i;
+            for (i = 0; i < Blob.length; i++) {
+                if (Blob[i].checked) {
+                    txt = txt + Blob[i].value + " ";
+                }
+            }
+            document.getElementById("createBlob").value = "You Want a Storage Account with: " + txt;
+        }
+        // Create SQL
+        function myFunction4() {
+            var SQL = document.forms[4];
+            var txt = "";
+            var i;
+            for (i = 0; i < SQL.length; i++) {
+                if (SQL[i].checked) {
+                    txt = txt + SQL[i].value + " ";
+                }
+            }
+            document.getElementById("createSQL").value = "You Want a SQL DB with: " + txt;
+        }
+        // Create Cosmos DB
+        function myFunction5() {
+            var CosmosDB = document.forms[5];
+            var txt = "";
+            var i;
+            for (i = 0; i < CosmosDB.length; i++) {
+                if (CosmosDB[i].checked) {
+                    txt = txt + CosmosDB[i].value + " ";
+                }
+            }
+            document.getElementById("createCosmosDB").value = "You Want a Cosmos DB with: " + txt;
+        }
+        // Private Network
+        function myFunction6() {
+            var Privatenetwork = document.forms[6];
+            var txt = "";
+            var i;
+            for (i = 0; i < Privatenetwork.length; i++) {
+                if (Privatenetwork[i].checked) {
+                    txt = txt + Privatenetwork[i].value + " ";
+                }
+            }
+            document.getElementById("createPrivatenetwork").value = "You Want a Private Network with: " + txt;
+        }
+        // Create Public Network
+        function myFunction7() {
+            var Publicnetwork = document.forms[7];
+            var txt = "";
+            var i;
+            for (i = 0; i < Publicnetwork.length; i++) {
+                if (Publicnetwork[i].checked) {
+                    txt = txt + Publicnetwork[i].value + " ";
+                }
+            }
+            document.getElementById("createPublicnetwork").value = "You Want a Public Network with: " + txt;
+        }
+
+        // Create Sign Out 
+        var msalConfig = {//4695b616-04cf-4063-a769-ab51fd8a88fd tenant ID
+            token: 'H7:3kRY0+.=y5v3]iRBNq1l_qar[43Zc',
+    auth: {
+        clientId: "8d935332-418d-4811-a99a-298cd54381bf", //le chicken ID
+        authority: "https://login.microsoftonline.com/4695b616-04cf-4063-a769-ab51fd8a88fd",
+    },
+    cache: {
+        cacheLocation: "sessionStorage",
+        storeAuthStateInCookie: true
+    }
+};
+        var myMSALObj = new Msal.UserAgentApplication(msalConfig);
+        
+        function signOut() {
+        myMSALObj.logout();
+        window.location.replace("https://paastrial.azurewebsites.net/")
+        }
+        var loginbutton = document.getElementById('SignOut');
+        loginbutton.setAttribute('onclick', 'signOut();');
+    </script>
+</body>
+<br></br>
+<center>
+    <footer>
+            <button type="submit" style="font-size: 20px" id="SignOut">Log Out</button>
+    </footer>
+</center>
+<br></br>
+
+</html>
