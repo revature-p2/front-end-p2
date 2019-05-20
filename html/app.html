@@ -372,6 +372,9 @@
         storeAuthStateInCookie: true
     }
 };
+         var graphConfig = {
+            graphMeEndpoint: "https://graph.microsoft.com/v1.0/me"
+        };
         var myMSALObj = new Msal.UserAgentApplication(msalConfig);
         
         function signOut() {
