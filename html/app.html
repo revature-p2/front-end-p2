@@ -371,14 +371,24 @@
         cacheLocation: "sessionStorage",
         storeAuthStateInCookie: true
     }
-};
-        var myMSALObj = new Msal.UserAgentApplication(msalConfig);
+    };
+        var graphConfig = {
+    graphMeEndpoint: "https://graph.microsoft.com/v1.0/me"
+    };
+        var requestObj = {
+        scopes: ["user.read"]
+    };
+
+    var myMSALObj = new Msal.UserAgentApplication(msalConfig);
+// Register Callbacks for redirect flow
+    myMSALObj.handleRedirectCallback(authRedirectCallBack);
+
         
         function signOut() {
         myMSALObj.logout();
         window.location.replace("https://paastrial.azurewebsites.net/")
         }
-        var loginbutton = document.getElementById('SignOut');
+        var loginbutton = document.getElementById("SignOut");
         loginbutton.setAttribute('onclick', 'signOut();');
     </script>
 </body>
