@@ -16,12 +16,14 @@
             border: none;
             text-align: left;
             outline: none;
-            font-size: 15px;
+            font-size: 18px;
         }
+
         .active,
         .collapsible:hover {
             background-color: #555;
         }
+
         .content {
             padding: 0 18px;
             display: none;
@@ -46,13 +48,14 @@
                     <div class="createvm">
                         <span class="collapsible">Build VM</span>
                         <p class="content" style="background-color: #ffffff;
-                        border: 1px solid black;
-                        opacity: 0.5; border: 2px solid black;
-                        margin: 50px; font-weight: bold; color: black;">
+                        border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
-                                <input type="checkbox" name="VM" value="vmproperty0">Property 0<br>
-                                <input type="checkbox" name="VM" value="vmproperty1">Property 1<br>
-                                <input type="checkbox" name="VM" value="vmproperty2">Property 2<br>
+                                VM name:&emsp;&emsp;&emsp;&emsp14;&emsp14;<input type="text" name="VMname" value=""
+                                    required><br>
+                                Attached Vnet:&emsp;&emsp14;&emsp14;<input type="text" name="VMnetwork" value=""
+                                    required><br>
+                                Admin Username: <input type="text" name="VMuser" value="" required><br>
+                                Admin Password:&emsp14; <input type="password" name="VMpassword" value="" required><br>
                                 <input type="button" onclick="myFunction()" value="Review VM">
                                 <input type="reset">
                                 <br>
@@ -65,26 +68,54 @@
                     </div>
                 </form>
 
-                <!-- Directory -->
+                <!-- Directory Users -->
                 <form action="" method="GET">
-                    Build a Directory
+                    Update Directory Users
                     <div class="createdir">
-                        <span class="collapsible">Build directory</span>
+                        <span class="collapsible">Update directory Users</span>
                         <p class="content" style="background-color: #ffffff;
-                        border: 1px solid black;
-                        opacity: 0.5; border: 2px solid black;
-                        margin: 50px; font-weight: bold; color: black;">
+                        border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
-                                <input type="checkbox" name="Dir" value="dirproperty0">Property 0<br>
-                                <input type="checkbox" name="Dir" value="dirproperty1">Property 1<br>
-                                <input type="checkbox" name="Dir" value="dirproperty2">Property 2<br>
+                                <select name="dirUsers" required>
+                                    <option value=""> ---Please Select an Action---</option>
+                                    <option value="createuser">Create User</option>
+                                    <option value="deleteuser">Delete User</option>
+                                </select><br>
+                                Enter Username: <input type="text" name="dirUsername" value="" required><br>
                                 <input type="button" onclick="myFunction1()" value="Review Directory">
                                 <input type="reset">
                                 <br>
                                 <input type="text" id="createDir" size="200">
                                 <h0>__________________________________________________________________ </h0>
                                 <br>
-                                <input type="submit" value="Create Directory">
+                                <input type="submit" value="Update Directory Users">
+                            </form>
+                        </p>
+                    </div>
+                </form>
+
+                <!-- Directory Roles -->
+                <form action="" method="GET">
+                    Update Directory Roles
+                    <div class="dirroles">
+                        <span class="collapsible">Update directory Roles</span>
+                        <p class="content" style="background-color: #ffffff;
+                            border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
+                            <form action="">
+                                <select name="dirRoles" required>
+                                    <option value=""> ---Please Select an Action---</option>
+                                    <option value="assignrole">Assing Role</option>
+                                    <option value="deleterole">Delete Role</option>
+                                </select><br>
+                                Enter Username: <input type="text" name="roleUsername" value="" required><br>
+                                Enter Role: &emsp;&emsp;&emsp13;<input type="text" name="roleValue" value=""><br>
+                                <input type="button" onclick="myFunction8()" value="Review Directory Roles">
+                                <input type="reset">
+                                <br>
+                                <input type="text" id="dirRoles" size="200">
+                                <h0>__________________________________________________________________ </h0>
+                                <br>
+                                <input type="submit" value="Update Directory Roles">
                             </form>
                         </p>
                     </div>
@@ -96,13 +127,10 @@
                     <div class="createwebapp">
                         <span class="collapsible">Build Webapp</span>
                         <p class="content" style="background-color: #ffffff;
-                        border: 1px solid black;
-                        opacity: 0.5; border: 2px solid black;
-                        margin: 50px; font-weight: bold; color: black;">
+                        border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
-                                <input type="checkbox" name="Webapp" value="webappproperty0">Property 0<br>
-                                <input type="checkbox" name="Webapp" value="webappproperty1">Property 1<br>
-                                <input type="checkbox" name="Webapp" value="webappproperty2">Property 2<br>
+                                WebApp Name: <input type="text" name="webappname" value="" required><br>
+                                WebApp Plan: &emsp14;<input type="text" name="webappplan" value="" required><br>
                                 <input type="button" onclick="myFunction2()" value="Review WebApp">
                                 <input type="reset">
                                 <br>
@@ -121,13 +149,9 @@
                     <div class="createblob">
                         <span class="collapsible">Build Storage</span>
                         <p class="content" style="background-color: #ffffff;
-                        border: 1px solid black;
-                        opacity: 0.5; border: 2px solid black;
-                        margin: 50px; font-weight: bold; color: black;">
+                        border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
-                                <input type="checkbox" name="Blob" value="storageproperty0">Property 0<br>
-                                <input type="checkbox" name="Blob" value="storageproperty1">Property 1<br>
-                                <input type="checkbox" name="Blob" value="storageproperty2">Property 2<br>
+                                Storage Name: <input type="text" name="storagename" value="" required><br>
                                 <input type="button" onclick="myFunction3()" value="Review Storage">
                                 <input type="reset">
                                 <br>
@@ -146,21 +170,23 @@
                     <div class="createsql">
                         <span class="collapsible">Build MySQL-DB</span>
                         <p class="content" style="background-color: #ffffff;
-                        border: 1px solid black;
-                        opacity: 0.5; border: 2px solid black;
-                        margin: 50px; font-weight: bold; color: black;">
+                        border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
-                                <input type="checkbox" name="SQL" value="SQLproperty0">Property 0<br>
-                                <input type="checkbox" name="SQL" value="SQLproperty1">Property 1<br>
-                                <input type="checkbox" name="SQL" value="SQLproperty2">Property 2<br>
-                                <input type="button" onclick="myFunction4()" value="Review SQL">
+                                SQL Server Name:&emsp;&emsp;&emsp;<input type="text" name="sqlserver" value=""
+                                    required><br>
+                                Server Admin Username: <input type="text" name="sqlusername" value="" required><br>
+                                Server Admin Password:&emsp14; <input type="password" name="sqlpassword" value=""
+                                    required><br>
+                                Database Name:&emsp;&emsp;&emsp;&emsp; <input type="text" name="sqldbname" value=""
+                                    required><br>
+                                <input type="button" onclick="myFunction4()" value="Review SQL Database">
                                 <input type="reset">
                                 <br>
                                 <input type="text" id="createSQL" size="200">
                                 <h0>__________________________________________________________________
                                 </h0>
                                 <br>
-                                <input type="submit" value="Create SQL">
+                                <input type="submit" value="Create SQL Database">
                             </form>
                         </p>
                     </div>
@@ -172,13 +198,14 @@
                     <div class="createcosmosDB">
                         <span class="collapsible">Build CosmosDB</span>
                         <p class="content" style="background-color: #ffffff;
-                        border: 1px solid black;
-                        opacity: 0.5; border: 2px solid black;
-                        margin: 50px; font-weight: bold; color: black;">
+                        border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
-                                <input type="checkbox" name="CosmosDB" value="CosmosDBproperty0">Property 0<br>
-                                <input type="checkbox" name="CosmosDB" value="CosmosDBproperty1">Property 1<br>
-                                <input type="checkbox" name="CosmosDB" value="CosmosDBproperty2">Property 2<br>
+                                CosmosDB Account Name:&emsp13;&emsp14;&emsp14;<input type="text" name="cosmosaccount"
+                                    value="" required><br>
+                                CosmosDB Name:&emsp;&emsp;&emsp;&emsp;&emsp13; <input type="text" name="cosmosdbname"
+                                    value="" required><br>
+                                CosmosDB Collection Name:<input type="password" name="cosmosdbcollection" value=""
+                                    required><br>
                                 <input type="button" onclick="myFunction5()" value="Review CosmosDB">
                                 <input type="reset">
                                 <br>
@@ -197,13 +224,16 @@
                     <div class="createprivatenetwork">
                         <span class="collapsible">Build Private Network</span>
                         <p class="content" style="background-color: #ffffff;
-                        border: 1px solid black;
-                        opacity: 0.5; border: 2px solid black;
-                        margin: 50px; font-weight: bold; color: black;">
+                        border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
-                                <input type="checkbox" name="Privatenetwork" value="privatenetproperty0">Property 0<br>
-                                <input type="checkbox" name="Privatenetwork" value="privatenetproperty1">Property 1<br>
-                                <input type="checkbox" name="Privatenetwork" value="privatenetproperty2">Property 2<br>
+                                Private Vnet Name:&emsp13;&emsp13;&emsp;&emsp;&emsp;&emsp;<input type="text"
+                                    name="privatevnetname" value="" required><br>
+                                CIDR Address Prefixes:&emsp13;&emsp13;&emsp;&emsp;<input type="number"
+                                    name="privatevnetip" value="" required><br>
+                                CIDR Address Prefixes Mask:<input type="number" name="privatevnetmask" value=""
+                                    required><br>
+                                Private Vnet Subnet Name:&emsp13;&emsp13;&emsp;<input type="text"
+                                    name="privatevnetsubnet" value="" required><br>
                                 <input type="button" onclick="myFunction6()" value="Review Private Network">
                                 <input type="reset">
                                 <br>
@@ -223,13 +253,16 @@
                     <div class="createpublicnetwork">
                         <span class="collapsible">Build Public Network</span>
                         <p class="content" style="background-color: #ffffff;
-                        border: 1px solid black;
-                        opacity: 0.5; border: 2px solid black;
-                        margin: 50px; font-weight: bold; color: black;">
+                        border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
-                                <input type="checkbox" name="Publicnetwork" value="publicnetproperty0">Property 0<br>
-                                <input type="checkbox" name="Publicnetwork" value="publicnetproperty1">Property 1<br>
-                                <input type="checkbox" name="Publicnetwork" value="publicnetproperty2">Property 2<br>
+                                Public Vnet Name:&emsp13;&emsp13;&emsp;&emsp;&emsp;&emsp;<input type="text"
+                                    name="publicvnetname" value="" required><br>
+                                CIDR Address Prefixes:&emsp13;&emsp13;&emsp;&emsp;<input type="number"
+                                    name="publicvnetip" value="" required><br>
+                                CIDR Address Prefixes Mask:<input type="number" name="publicvnetmask" value=""
+                                    required><br>
+                                Public Vnet Subnet Name:&emsp13;&emsp13;&emsp;<input type="text" name="publicvnetsubnet"
+                                    value="" required><br>
                                 <input type="button" onclick="myFunction7()" value="Review Public Network">
                                 <input type="reset">
                                 <br>
@@ -244,6 +277,7 @@
             </h1>
         </center>
     </div>
+    
     <h0>________________________________________________________________________________________________________________________________________________________________________
     </h0>
 
@@ -363,30 +397,30 @@
         // Create Sign Out 
         var msalConfig = {//4695b616-04cf-4063-a769-ab51fd8a88fd tenant ID
             token: 'H7:3kRY0+.=y5v3]iRBNq1l_qar[43Zc',
-    auth: {
-        clientId: "8d935332-418d-4811-a99a-298cd54381bf", //le chicken ID
-        authority: "https://login.microsoftonline.com/4695b616-04cf-4063-a769-ab51fd8a88fd",
-    },
-    cache: {
-        cacheLocation: "sessionStorage",
-        storeAuthStateInCookie: true
-    }
-    };
+            auth: {
+                clientId: "8d935332-418d-4811-a99a-298cd54381bf", //le chicken ID
+                authority: "https://login.microsoftonline.com/4695b616-04cf-4063-a769-ab51fd8a88fd",
+            },
+            cache: {
+                cacheLocation: "sessionStorage",
+                storeAuthStateInCookie: true
+            }
+        };
         var graphConfig = {
-    graphMeEndpoint: "https://graph.microsoft.com/v1.0/me"
-    };
+            graphMeEndpoint: "https://graph.microsoft.com/v1.0/me"
+        };
         var requestObj = {
-        scopes: ["user.read"]
-    };
+            scopes: ["user.read"]
+        };
 
-    var myMSALObj = new Msal.UserAgentApplication(msalConfig);
-// Register Callbacks for redirect flow
-    myMSALObj.handleRedirectCallback(authRedirectCallBack);
+        var myMSALObj = new Msal.UserAgentApplication(msalConfig);
+        // Register Callbacks for redirect flow
+        myMSALObj.handleRedirectCallback(authRedirectCallBack);
 
-        
+
         function signOut() {
-        myMSALObj.logout();
-        window.location.replace("https://paastrial.azurewebsites.net/")
+            myMSALObj.logout();
+            window.location.replace("https://paastrial.azurewebsites.net/")
         }
         var loginbutton = document.getElementById("SignOut");
         loginbutton.setAttribute('onclick', 'signOut();');
