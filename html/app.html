@@ -42,182 +42,6 @@
                 </strong>
                 <h0>_______________________________________________________________ </h0>
 
-                <!--VM -->
-                <form action="" method="GET">
-                    Build a Virtual Machine
-                    <div class="createvm">
-                        <span class="collapsible">Build VM</span>
-                        <p class="content" style="background-color: #ffffff;
-                        border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
-                            <form action="">
-                                VM name:&emsp;&emsp;&emsp;&emsp14;&emsp14;<input type="text" name="VMname" value=""
-                                    required><br>
-                                Attached Vnet:&emsp;&emsp14;&emsp14;<input type="text" name="VMnetwork" value=""
-                                    required><br>
-                                Admin Username: <input type="text" name="VMuser" value="" required><br>
-                                Admin Password:&emsp14; <input type="password" name="VMpassword" value="" required><br>
-                                <input type="button" onclick="myFunction()" value="Review VM">
-                                <input type="reset">
-                                <br>
-                                <input type="text" id="createVM" size="200">
-                                <h0>__________________________________________________________________ </h0>
-                                <br>
-                                <input type="submit" value="Create VM">
-                            </form>
-                        </p>
-                    </div>
-                </form>
-
-                <!-- Directory Users -->
-                <form action="" method="GET">
-                    Update Directory Users
-                    <div class="createdir">
-                        <span class="collapsible">Update directory Users</span>
-                        <p class="content" style="background-color: #ffffff;
-                        border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
-                            <form action="">
-                                <select name="dirUsers" required>
-                                    <option value=""> ---Please Select an Action---</option>
-                                    <option value="createuser">Create User</option>
-                                    <option value="deleteuser">Delete User</option>
-                                </select><br>
-                                Enter Username: <input type="text" name="dirUsername" value="" required><br>
-                                <input type="button" onclick="myFunction1()" value="Review Directory">
-                                <input type="reset">
-                                <br>
-                                <input type="text" id="createDir" size="200">
-                                <h0>__________________________________________________________________ </h0>
-                                <br>
-                                <input type="submit" value="Update Directory Users">
-                            </form>
-                        </p>
-                    </div>
-                </form>
-
-                <!-- Directory Roles -->
-                <form action="" method="GET">
-                    Update Directory Roles
-                    <div class="dirroles">
-                        <span class="collapsible">Update directory Roles</span>
-                        <p class="content" style="background-color: #ffffff;
-                            border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
-                            <form action="">
-                                <select name="dirRoles" required>
-                                    <option value=""> ---Please Select an Action---</option>
-                                    <option value="assignrole">Assing Role</option>
-                                    <option value="deleterole">Delete Role</option>
-                                </select><br>
-                                Enter Username: <input type="text" name="roleUsername" value="" required><br>
-                                Enter Role: &emsp;&emsp;&emsp13;<input type="text" name="roleValue" value=""><br>
-                                <input type="button" onclick="myFunction8()" value="Review Directory Roles">
-                                <input type="reset">
-                                <br>
-                                <input type="text" id="dirRoles" size="200">
-                                <h0>__________________________________________________________________ </h0>
-                                <br>
-                                <input type="submit" value="Update Directory Roles">
-                            </form>
-                        </p>
-                    </div>
-                </form>
-
-                <!-- Web App -->
-                <form action="" method="GET">
-                    Build a Web App
-                    <div class="createwebapp">
-                        <span class="collapsible">Build Webapp</span>
-                        <p class="content" style="background-color: #ffffff;
-                        border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
-                            <form action="">
-                                WebApp Name: <input type="text" name="webappname" value="" required><br>
-                                WebApp Plan: &emsp14;<input type="text" name="webappplan" value="" required><br>
-                                <input type="button" onclick="myFunction2()" value="Review WebApp">
-                                <input type="reset">
-                                <br>
-                                <input type="text" id="createWebapp" size="200">
-                                <h0>__________________________________________________________________ </h0>
-                                <br>
-                                <input type="submit" value="Create WebApp">
-                            </form>
-                        </p>
-                    </div>
-                </form>
-
-                <!-- Storage -->
-                <form action="" method="GET">
-                    Build Blob Storage
-                    <div class="createblob">
-                        <span class="collapsible">Build Storage</span>
-                        <p class="content" style="background-color: #ffffff;
-                        border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
-                            <form action="">
-                                Storage Name: <input type="text" name="storagename" value="" required><br>
-                                <input type="button" onclick="myFunction3()" value="Review Storage">
-                                <input type="reset">
-                                <br>
-                                <input type="text" id="createBlob" size="200">
-                                <h0>__________________________________________________________________ </h0>
-                                <br>
-                                <input type="submit" value="Create Storage">
-                            </form>
-                        </p>
-                    </div>
-                </form>
-
-                <!-- SQL Database -->
-                <form action="" method="GET">
-                    Build a SQL database
-                    <div class="createsql">
-                        <span class="collapsible">Build MySQL-DB</span>
-                        <p class="content" style="background-color: #ffffff;
-                        border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
-                            <form action="">
-                                SQL Server Name:&emsp;&emsp;&emsp;<input type="text" name="sqlserver" value=""
-                                    required><br>
-                                Server Admin Username: <input type="text" name="sqlusername" value="" required><br>
-                                Server Admin Password:&emsp14; <input type="password" name="sqlpassword" value=""
-                                    required><br>
-                                Database Name:&emsp;&emsp;&emsp;&emsp; <input type="text" name="sqldbname" value=""
-                                    required><br>
-                                <input type="button" onclick="myFunction4()" value="Review SQL Database">
-                                <input type="reset">
-                                <br>
-                                <input type="text" id="createSQL" size="200">
-                                <h0>__________________________________________________________________
-                                </h0>
-                                <br>
-                                <input type="submit" value="Create SQL Database">
-                            </form>
-                        </p>
-                    </div>
-                </form>
-
-                <!-- Cosmos DB -->
-                <form action="" method="GET">
-                    Build a Cosmos Database
-                    <div class="createcosmosDB">
-                        <span class="collapsible">Build CosmosDB</span>
-                        <p class="content" style="background-color: #ffffff;
-                        border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
-                            <form action="">
-                                CosmosDB Account Name:&emsp13;&emsp14;&emsp14;<input type="text" name="cosmosaccount"
-                                    value="" required><br>
-                                CosmosDB Name:&emsp;&emsp;&emsp;&emsp;&emsp13; <input type="text" name="cosmosdbname"
-                                    value="" required><br>
-                                CosmosDB Collection Name:<input type="password" name="cosmosdbcollection" value=""
-                                    required><br>
-                                <input type="button" onclick="myFunction5()" value="Review CosmosDB">
-                                <input type="reset">
-                                <br>
-                                <input type="text" id="createCosmosDB" size="200">
-                                <h0>__________________________________________________________________ </h0>
-                                <br>
-                                <input type="submit" value="Create CosmosDB">
-                            </form>
-                        </p>
-                    </div>
-                </form>
-
                 <!-- Private Network -->
                 <form action="" method="GET">
                     Build a Private Network
@@ -226,18 +50,19 @@
                         <p class="content" style="background-color: #ffffff;
                         border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
-                                Private Vnet Name:&emsp13;&emsp13;&emsp;&emsp;&emsp;&emsp;<input type="text"
-                                    name="privatevnetname" value="" required><br>
-                                CIDR Address Prefixes:&emsp13;&emsp13;&emsp;&emsp;<input type="number"
-                                    name="privatevnetip" value="" required><br>
-                                CIDR Address Prefixes Mask:<input type="number" name="privatevnetmask" value=""
+                                Private Vnet Name:&emsp13;&emsp;&emsp;&emsp;&emsp;<input type="text"
+                                    id="privatevnetname" value="" required><br>
+                                CIDR Address Prefixes:&emsp13;&emsp13;&emsp;&emsp;<input type="text" id="privatevnetip"
+                                    value="" required><br>
+                                CIDR Address Prefixes Mask:<input type="number" id="privatevnetmask" value=""
                                     required><br>
-                                Private Vnet Subnet Name:&emsp13;&emsp13;&emsp;<input type="text"
-                                    name="privatevnetsubnet" value="" required><br>
-                                <input type="button" onclick="myFunction6()" value="Review Private Network">
+                                Private Vnet Subnet Name:&emsp13;&emsp13;&emsp13;&emsp13;<input type="text"
+                                    id="privatevnetsubnet" value="" required><br>
+                                <input type="button" onclick="privateNetwork()" value="Review Private Network">
                                 <input type="reset">
                                 <br>
-                                <input type="text" id="createPrivatenetwork" size="200">
+                                <input type="text" id="reviewprivatenetwork" size="50" disabled>
+                                <br>
                                 <h0>__________________________________________________________________
                                 </h0>
                                 <br>
@@ -256,17 +81,18 @@
                         border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
                                 Public Vnet Name:&emsp13;&emsp13;&emsp;&emsp;&emsp;&emsp;<input type="text"
-                                    name="publicvnetname" value="" required><br>
-                                CIDR Address Prefixes:&emsp13;&emsp13;&emsp;&emsp;<input type="number"
-                                    name="publicvnetip" value="" required><br>
-                                CIDR Address Prefixes Mask:<input type="number" name="publicvnetmask" value=""
-                                    required><br>
-                                Public Vnet Subnet Name:&emsp13;&emsp13;&emsp;<input type="text" name="publicvnetsubnet"
+                                    id="publicvnetname" value="" required><br>
+                                CIDR Address Prefixes:&emsp13;&emsp13;&emsp;&emsp;<input type="text" id="publicvnetip"
                                     value="" required><br>
-                                <input type="button" onclick="myFunction7()" value="Review Public Network">
+                                CIDR Address Prefixes Mask:<input type="number" id="publicvnetmask" value=""
+                                    required><br>
+                                Public Vnet Subnet Name:&emsp13;&emsp13;&emsp;<input type="text" id="publicvnetsubnet"
+                                    value="" required><br>
+                                <input type="button" onclick="publicNetwork()" value="Review Public Network">
                                 <input type="reset">
                                 <br>
-                                <input type="text" id="createPublicnetwork" size="200">
+                                <input type="text" id="reviewPublicnetwork" size="50" disabled>
+                                <br>
                                 <h0>__________________________________________________________________ </h0>
                                 <br>
                                 <input type="submit" value="Create Public Network">
@@ -274,10 +100,192 @@
                         </p>
                     </div>
                 </form>
+
+                <!--VM -->
+                <form action="" method="GET">
+                    Build a Virtual Machine
+                    <div class="createvm">
+                        <span class="collapsible">Build VM</span>
+                        <p class="content" style="background-color: #ffffff;
+                        border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
+                            <form action="">
+                                VM name:&emsp;&emsp;&emsp;&emsp14;&emsp14;<input type="text" id="VMname" value=""
+                                    required><br>
+                                Attached Vnet:&emsp;&emsp14;&emsp14;<input type="text" id="VMnetwork" value=""
+                                    required><br>
+                                Admin Username: <input type="text" id="VMuser" value="" required><br>
+                                Admin Password:&emsp14; <input type="password" id="VMpassword" value="" required><br>
+                                <input type="button" onclick="VM()" value="Review VM">
+                                <input type="reset"><br>
+                                <input type="text" id="reviewVM" size="50" disabled>
+                                <br>
+                                <h0>__________________________________________________________________ </h0>
+                                <br>
+                                <input type="submit" value="Create VM">
+                            </form>
+                        </p>
+                    </div>
+                </form>
+
+                <!-- Directory Users -->
+                <form action="" method="GET">
+                    Update Directory Users
+                    <div class="createdir">
+                        <span class="collapsible">Update directory Users</span>
+                        <p class="content" style="background-color: #ffffff;
+                        border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
+                            <form action="">
+                                <select id="dirAction" required>
+                                    <option value=""> ---Please Select an Action---</option>
+                                    <option value="Create User">Create User</option>
+                                    <option value="Delete User">Delete User</option>
+                                </select><br>
+                                Enter Username: <input type="text" id="dirUsername" value="" required><br>
+                                <input type="button" onclick="userDir()" value="Review Directory">
+                                <input type="reset">
+                                <br>
+                                <input type="text" id="reviewDir" size="75" disabled>
+                                <br>
+                                <h0>__________________________________________________________________ </h0>
+                                <br>
+                                <input type="submit" value="Update Directory Users">
+                            </form>
+                        </p>
+                    </div>
+                </form>
+
+                <!-- Directory Roles -->
+                <form action="" method="GET">
+                    Update Directory Roles
+                    <div class="dirroles">
+                        <span class="collapsible">Update directory Roles</span>
+                        <p class="content" style="background-color: #ffffff;
+                            border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
+                            <form action="">
+                                <select id="roleAction" required>
+                                    <option value=""> ---Please Select an Action---</option>
+                                    <option value="Assign Role">Assing Role</option>
+                                    <option value="Delete Role">Delete Role</option>
+                                </select><br>
+                                Enter Username: <input type="text" id="roleUsername" value="" required><br>
+                                Enter Role: &emsp;&emsp;&emsp13;<input type="text" id="roleType" value=""><br>
+                                <input type="button" onclick="dirRoles()" value="Review Directory Roles">
+                                <input type="reset">
+                                <br>
+                                <input type="text" id="reviewdirRoles" size="75" disabled>
+                                <br>
+                                <h0>__________________________________________________________________ </h0>
+                                <br>
+                                <input type="submit" value="Update Directory Roles">
+                            </form>
+                        </p>
+                    </div>
+                </form>
+
+                <!-- Web App -->
+                <form action="" method="GET">
+                    Build a Web App
+                    <div class="createwebapp">
+                        <span class="collapsible">Build Webapp</span>
+                        <p class="content" style="background-color: #ffffff;
+                        border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
+                            <form action="">
+                                WebApp Name: <input type="text" id="webappname" value="" required><br>
+                                WebApp Plan: &emsp13;&emsp13;<input type="text" id="webappplan" value="" required><br>
+                                <input type="button" onclick="webApp()" value="Review WebApp">
+                                <input type="reset">
+                                <br>
+                                <input type="text" id="reviewWebapp" size="75" disabled>
+                                <br>
+                                <h0>__________________________________________________________________ </h0>
+                                <br>
+                                <input type="submit" value="Create WebApp">
+                            </form>
+                        </p>
+                    </div>
+                </form>
+
+                <!-- Blod Storage -->
+                <form action="" method="GET">
+                    Build Blob Storage
+                    <div class="createblob">
+                        <span class="collapsible">Build Storage</span>
+                        <p class="content" style="background-color: #ffffff;
+                        border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
+                            <form action="">
+                                Storage Name: <input type="text" id="storagename" value="" required><br>
+                                <input type="button" onclick="storageCreate()" value="Review Storage">
+                                <input type="reset">
+                                <br>
+                                <input type="text" id="reviewStorage" size="50" disabled>
+                                <br>
+                                <h0>__________________________________________________________________ </h0>
+                                <br>
+                                <input type="submit" value="Create Storage">
+                            </form>
+                        </p>
+                    </div>
+                </form>
+
+                <!-- SQL Database -->
+                <form action="" method="GET">
+                    Build a SQL database
+                    <div class="createsql">
+                        <span class="collapsible">Build MySQL-DB</span>
+                        <p class="content" style="background-color: #ffffff;
+                        border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
+                            <form action="">
+                                SQL Server Name:&emsp;&emsp;&emsp;<input type="text" id="sqlserver" value=""
+                                    required><br>
+                                Server Admin Username: <input type="text" id="sqlusername" value="" required><br>
+                                Server Admin Password:&emsp14; <input type="password" id="sqlpassword" value=""
+                                    required><br>
+                                Database Name:&emsp;&emsp;&emsp;&emsp; <input type="text" id="sqldbname" value=""
+                                    required><br>
+                                <input type="button" onclick="createSQL()" value="Review SQL Database">
+                                <input type="reset">
+                                <br>
+                                <input type="text" id="reviewSQL" size="100" disabled>
+                                <br>
+                                <h0>__________________________________________________________________
+                                </h0>
+                                <br>
+                                <input type="submit" value="Create SQL Database">
+                            </form>
+                        </p>
+                    </div>
+                </form>
+
+                <!-- Kosmos DB -->
+                <form action="" method="GET">
+                    Build a Cosmos Database
+                    <div class="createcosmosDB">
+                        <span class="collapsible">Build CosmosDB</span>
+                        <p class="content" style="background-color: #ffffff;
+                        border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
+                            <form action="">
+                                CosmosDB Account Name:&emsp13;&emsp14;&emsp14;<input type="text" id="cosmosaccount"
+                                    value="" required><br>
+                                CosmosDB Name:&emsp;&emsp;&emsp;&emsp;&emsp13; <input type="text" id="cosmosdbname"
+                                    value="" required><br>
+                                CosmosDB Collection Name:<input type="password" id="cosmosdbcollection" value=""
+                                    required><br>
+                                <input type="button" onclick="createKosmos()" value="Review CosmosDB">
+                                <input type="reset">
+                                <br>
+                                <input type="text" id="reviewCosmosDB" size="75" disabled>
+                                <br>
+                                <h0>__________________________________________________________________ </h0>
+                                <br>
+                                <input type="submit" value="Create CosmosDB">
+                            </form>
+                        </p>
+                    </div>
+                </form>
             </h1>
         </center>
     </div>
-    
+
     <h0>________________________________________________________________________________________________________________________________________________________________________
     </h0>
 
@@ -297,104 +305,82 @@
                 }
             });
         }
-        //Create VM 
-        function myFunction() {
-            var VM = document.forms[0];
-            var txt = "";
-            var i;
-            for (i = 0; i < VM.length; i++) {
-                if (VM[i].checked) {
-                    txt = txt + VM[i].value + " ";
-                }
-            }
-            document.getElementById("createVM").value = "You Want a VM with: " + txt;
-        }
-        //Create Directory 
-        function myFunction1() {
-            var Dir = document.forms[1];
-            var txt = "";
-            var i;
-            for (i = 0; i < Dir.length; i++) {
-                if (Dir[i].checked) {
-                    txt = txt + Dir[i].value + " ";
-                }
-            }
-            document.getElementById("createDir").value = "You Want a Directory with: " + txt;
-        }
-        //Create Web App 
-        function myFunction2() {
-            var Webapp = document.forms[2];
-            var txt = "";
-            var i;
-            for (i = 0; i < Webapp.length; i++) {
-                if (Webapp[i].checked) {
-                    txt = txt + Webapp[i].value + " ";
-                }
-            }
-            document.getElementById("createWebapp").value = "You Want a Web App with: " + txt;
-        }
-        //Create Blob Storage
-        function myFunction3() {
-            var Blob = document.forms[3];
-            var txt = "";
-            var i;
-            for (i = 0; i < Blob.length; i++) {
-                if (Blob[i].checked) {
-                    txt = txt + Blob[i].value + " ";
-                }
-            }
-            document.getElementById("createBlob").value = "You Want a Storage Account with: " + txt;
-        }
-        // Create SQL
-        function myFunction4() {
-            var SQL = document.forms[4];
-            var txt = "";
-            var i;
-            for (i = 0; i < SQL.length; i++) {
-                if (SQL[i].checked) {
-                    txt = txt + SQL[i].value + " ";
-                }
-            }
-            document.getElementById("createSQL").value = "You Want a SQL DB with: " + txt;
-        }
-        // Create Cosmos DB
-        function myFunction5() {
-            var CosmosDB = document.forms[5];
-            var txt = "";
-            var i;
-            for (i = 0; i < CosmosDB.length; i++) {
-                if (CosmosDB[i].checked) {
-                    txt = txt + CosmosDB[i].value + " ";
-                }
-            }
-            document.getElementById("createCosmosDB").value = "You Want a Cosmos DB with: " + txt;
-        }
-        // Private Network
-        function myFunction6() {
-            var Privatenetwork = document.forms[6];
-            var txt = "";
-            var i;
-            for (i = 0; i < Privatenetwork.length; i++) {
-                if (Privatenetwork[i].checked) {
-                    txt = txt + Privatenetwork[i].value + " ";
-                }
-            }
-            document.getElementById("createPrivatenetwork").value = "You Want a Private Network with: " + txt;
-        }
-        // Create Public Network
-        function myFunction7() {
-            var Publicnetwork = document.forms[7];
-            var txt = "";
-            var i;
-            for (i = 0; i < Publicnetwork.length; i++) {
-                if (Publicnetwork[i].checked) {
-                    txt = txt + Publicnetwork[i].value + " ";
-                }
-            }
-            document.getElementById("createPublicnetwork").value = "You Want a Public Network with: " + txt;
+
+        //Create Private Network
+        function privateNetwork() {
+            var a = document.getElementById("privatevnetname").value;
+            var b = document.getElementById("privatevnetip").value;
+            var c = document.getElementById("privatevnetmask").value;
+            var d = document.getElementById("privatevnetsubnet").value;
+            document.getElementById("reviewprivatenetwork").value = 'You want a Private Network with:' + [a, b, c, d];
         }
 
-        // Create Sign Out 
+        //Create Public Network
+        function publicNetwork() {
+            var a = document.getElementById("publicvnetname").value;
+            var b = document.getElementById("publicvnetip").value;
+            var c = document.getElementById("publicvnetmask").value;
+            var d = document.getElementById("publicvnetsubnet").value;
+            document.getElementById("reviewPublicnetwork").value = 'You want a Public Network with:' + [a, b, c, d];
+        }
+
+        //Create VM 
+        function VM() {
+            var a = document.getElementById("VMname").value;
+            var b = document.getElementById("VMnetwork").value;
+            var c = document.getElementById("VMuser").value;
+            var d = document.getElementById("VMpassword").value;
+            document.getElementById("reviewVM").value = 'You want a VM with:' + [a, b, c, d];
+        }
+
+        //Update Directory Users
+        function userDir() {
+            var a = document.getElementById("dirAction").value;
+            var b = document.getElementById("dirUsername").value;
+            document.getElementById("reviewDir").value = 'You want to update Directory users with:' + [a, b];
+        }
+
+        //Update Directory Roles
+        function dirRoles() {
+            var a = document.getElementById("roleAction").value;
+            var b = document.getElementById("roleUsername").value;
+            var c = document.getElementById("roleType").value;
+            document.getElementById("reviewdirRoles").value = 'You want to update Directory Roles with:' + [a, b, c];
+        }
+
+        //Create a Web App
+        function webApp() {
+            var a = document.getElementById("webappname").value;
+            var b = document.getElementById("webappplan").value;
+            document.getElementById("reviewWebapp").value = 'You want to create a WebApp with:' + [a, b];
+        }
+
+        //Blod Storage
+        function storageCreate() {
+            var a = document.getElementById("storagename").value;
+            document.getElementById("reviewStorage").value = 'You want to create Blob Storage with Name:' + [a];
+        }
+
+        //Create an SQL Database
+        function createSQL() {
+            var a = document.getElementById("sqlserver").value;
+            var b = document.getElementById("sqlusername").value;
+            var c = document.getElementById("sqlpassword").value;
+            var d = document.getElementById("sqldbname").value;
+            document.getElementById("reviewSQL").value = 'You want to create a SQL Database with:' + [a, b, c, d];
+        }
+
+        //Create a Cosmos Database
+        function createKosmos() {
+            var a = document.getElementById("cosmosaccount").value;
+            var b = document.getElementById("cosmosdbname").value;
+            var c = document.getElementById("cosmosdbcollection").value;
+            document.getElementById("reviewCosmosDB").value = 'You want to create a Cosmos Database with:' + [a, b, c];
+        }
+
+
+
+        // Create Sign Out
         var msalConfig = {//4695b616-04cf-4063-a769-ab51fd8a88fd tenant ID
             token: 'H7:3kRY0+.=y5v3]iRBNq1l_qar[43Zc',
             auth: {
@@ -424,16 +410,18 @@
         }
         var loginbutton = document.getElementById("SignOut");
         loginbutton.setAttribute('onclick', 'signOut();');
+
     </script>
 </body>
-<br></br>
+<br>
+
 <center>
     <footer>
+        <br>
         <form action="https://paastrial.azurewebsites.net/" method="GET">
             <button type="submit" style="font-size: 20px" id="SignOut">Log Out</button>
         </form>
+        <br>
     </footer>
 </center>
-<br></br>
-
 </html>
