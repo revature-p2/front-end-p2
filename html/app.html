@@ -61,24 +61,18 @@
                         <p class="content" style="background-color: #ffffff;
                         border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
-                                Virtual Network Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text"
+                                Virtual Network Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text"
                                     id="vnetname" name="vnetname"value="" required><br>
-                                CIDR Address Prefixes:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text"
+                                CIDR Address Prefixes with mask:&emsp;&emsp;&emsp;<input type="text"
                                     id="vnetip" name="vnetip" value="" required><br>
-                                CIDR Address Prefixes Mask:&emsp;&emsp;&emsp;&emsp;&emsp13;<input type="number"
-                                    id="vnetmask" name="vnetmask" value="" required><br>
-                                Private Vnet Subnet Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp13;<input type="text"
+                                Private Vnet Subnet Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp13;<input type="text"
                                     id="privatevnetsubnet" name="privatevnetsubnet" value="" required><br>
-                                Private CIDR Address Prefixes:&emsp;&emsp;&emsp;&emsp13;<input type="text"
+                                Private CIDR Address Prefixes with mask:<input type="text"
                                     id="privatevnetip" name="privatevnetip" value="" required><br>
-                                Private CIDR Address Prefixes Mask:&emsp13;&emsp13;<input type="number"
-                                    id="privatevnetmask" name="privatevnetmask" value="" required><br>
-                                Public Vnet Subnet Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp13;&emsp13;<input type="text"
+                                Public Vnet Subnet Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp13;&emsp13;<input type="text"
                                     id="publicvnetsubnet" name="publicvnetsubnet" value="" required><br>
-                                Public CIDR Address Prefixes:&emsp13;&emsp;&emsp;&emsp;&emsp13;<input type="text"
+                                Public CIDR Address Prefixes with mask:&emsp14;<input type="text"
                                     id="publicvnetip" name="publicvnetip" value="" required><br>
-                                Public CIDR Address Prefixes Mask:&emsp;<input type="number" id="publicvnetmask"
-                                    name="publicvnetmask" value="" required><br>
                                 <input type="button" onclick="Network()" value="Review Network">
                                 <input type="reset">
                                 <br>
@@ -104,6 +98,8 @@
                                 VM name:&emsp;&emsp;&emsp;&emsp14;&emsp14;<input type="text" id="VMname" name="VMname" value=""
                                     required><br>
                                 Attached Vnet:&emsp;&emsp14;&emsp14;<input type="text" id="VMnetwork" name="VMnetwork" value=""
+                                    required><br>
+                                Vnet  Subnet:&emsp;&emsp;&emsp14;<input type="text" id="VMsubnet" name="VMsubnet" value=""
                                     required><br>
                                 Admin Username: <input type="text" id="VMuser" name="VMuser" value="" required><br>
                                 Admin Password:&emsp14; <input type="password" id="VMpassword" name="VMpassword" value="" required><br>
@@ -159,8 +155,13 @@
                                     <option value="assign">Assing Role</option>
                                     <option value="delete">Delete Role</option>
                                 </select><br>
+                                <select id="roleType" name="roleType" required>
+                                    <option value=""> -----Please Select a Role-----</option>
+                                    <option value="reader">Reader Role</option>
+                                    <option value="contributor">Contributor Role</option>
+                                    <option value="owner">Administrator Role</option>
+                                </select><br>
                                 Enter Username: <input type="text" id="roleUsername" name="roleUsername" value="" required><br>
-                                Enter Role: &emsp;&emsp;&emsp13;<input type="text" id="roleType" name="roleType" value=""><br>
                                 <input type="button" onclick="dirRoles()" value="Review Directory Roles">
                                 <input type="reset">
                                 <br>
@@ -183,7 +184,7 @@
                         border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
                                 WebApp Name: <input type="text" id="webappname" name="webappname" value="" required><br>
-                                WebApp Plan: &emsp13;&emsp13;<input type="text" id="webappplan" name="webappplan" value="" required><br>
+                                Git Repository: &emsp13;&emsp13;<input type="text" id="gitrepo" name="gitrepo" value="" required><br>
                                 <input type="button" onclick="webApp()" value="Review WebApp">
                                 <input type="reset">
                                 <br>
@@ -309,14 +310,11 @@
         function Network() {
             var a = document.getElementById("vnetname").value;
             var b = document.getElementById("vnetip").value;
-            var c = document.getElementById("vnetmask").value;
             var d = document.getElementById("privatevnetsubnet").value;
             var e = document.getElementById("privatevnetip").value;
-            var f = document.getElementById("privatevnetmask").value;
             var g = document.getElementById("publicvnetsubnet").value;
             var h = document.getElementById("publicvnetip").value;
-            var i = document.getElementById("publicvnetmask").value;
-            document.getElementById("reviewnetwork").value = 'You want a Network with:' + [a, b, c, d, e, f, g, h, i];
+            document.getElementById("reviewnetwork").value = 'You want a Network with:' + [a, b, d, e, g, h];
         }
 
         //Create VM 
