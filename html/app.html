@@ -401,6 +401,17 @@
         var requestObj = {
             scopes: ["user.read"]
         };
+        
+        function authRedirectCallBack(error, response) {
+    if (error) {
+        console.log(error);
+    }
+    else {
+        if (response.tokenType === "access_token") {
+            callMSGraph(graphConfig.graphEndpoint, response.accessToken, graphAPICallback);
+        } else {
+            console.log("token type is:" + response.tokenType);
+        }}}
 
         var myMSALObj = new Msal.UserAgentApplication(msalConfig);
         // Register Callbacks for redirect flow
