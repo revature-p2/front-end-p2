@@ -9,6 +9,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.4/bluebird.min.js"></script>
     <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/msal.js"></script>
     <style>
+        strong {
+            color: black;
+            -webkit-text-fill-color: black;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 80px;
+        }
+
         .collapsible {
             background-color: #777;
             color: white;
@@ -39,7 +48,7 @@
     <div class="container">
         <center>
             <h1 style="color:black;font-size:40px;text-shadow: black">
-                <strong style="color:orangered;font-size:50px;font:bold;font-family: Cambria, Cochin, serif">
+                <strong>
                     OUR Chicken Cloud Services
                 </strong>
                 <h0>_______________________________________________________________ </h0>
@@ -52,24 +61,24 @@
                         <p class="content" style="background-color: #ffffff;
                         border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
-                                Virtual Network Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text" id="vnetname"
-                                    value="" required><br>
-                                CIDR Address Prefixes:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text" id="vnetip" value=""
-                                    required><br>
-                                CIDR Address Prefixes Mask:&emsp;&emsp;&emsp;&emsp;&emsp13;<input type="number" id="vnetmask" value=""
-                                    required><br>
+                                Virtual Network Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text"
+                                    id="vnetname" value="" required><br>
+                                CIDR Address Prefixes:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text"
+                                    id="vnetip" value="" required><br>
+                                CIDR Address Prefixes Mask:&emsp;&emsp;&emsp;&emsp;&emsp13;<input type="number"
+                                    id="vnetmask" value="" required><br>
                                 Private Vnet Subnet Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp13;<input type="text"
                                     id="privatevnetsubnet" value="" required><br>
-                                Private CIDR Address Prefixes:&emsp;&emsp;&emsp;&emsp13;<input type="text" id="privatevnetip"
-                                    value="" required><br>
-                                Private CIDR Address Prefixes Mask:&emsp13;&emsp13;<input type="number" id="privatevnetmask" value=""
-                                    required><br>
+                                Private CIDR Address Prefixes:&emsp;&emsp;&emsp;&emsp13;<input type="text"
+                                    id="privatevnetip" value="" required><br>
+                                Private CIDR Address Prefixes Mask:&emsp13;&emsp13;<input type="number"
+                                    id="privatevnetmask" value="" required><br>
                                 Public Vnet Subnet Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp13;&emsp13;<input type="text"
                                     id="publicvnetsubnet" value="" required><br>
                                 Public CIDR Address Prefixes:&emsp13;&emsp;&emsp;&emsp;&emsp13;<input type="text"
                                     id="publicvnetip" value="" required><br>
-                                Public CIDR Address Prefixes Mask:&emsp;<input type="number" id="publicvnetmask" value=""
-                                    required><br>
+                                Public CIDR Address Prefixes Mask:&emsp;<input type="number" id="publicvnetmask"
+                                    value="" required><br>
                                 <input type="button" onclick="Network()" value="Review Network">
                                 <input type="reset">
                                 <br>
@@ -267,11 +276,17 @@
                 </form>
             </h1>
         </center>
-        <button type="submit" style="font-size: 20px" id="SignOut">Log Out</button>
     </div>
-
     <h0>________________________________________________________________________________________________________________________________________________________________________
-    </h0>
+    </h0><br>
+    <center>
+    <footer><br>
+            <form action="https://paastrial.azurewebsites.net/" method="GET">
+            <button type="submit" style="font-size: 20px" id="SignOut">Log Out</button>
+            </form>
+            <br>
+    </footer>
+    </center>
 
     <!-- Javascript -->
     <!-- Collapsible Javascripts -->
@@ -376,17 +391,19 @@
         var requestObj = {
             scopes: ["user.read"]
         };
-        
+
         function authRedirectCallBack(error, response) {
-    if (error) {
-        console.log(error);
-    }
-    else {
-        if (response.tokenType === "access_token") {
-            callMSGraph(graphConfig.graphEndpoint, response.accessToken, graphAPICallback);
-        } else {
-            console.log("token type is:" + response.tokenType);
-        }}}
+            if (error) {
+                console.log(error);
+            }
+            else {
+                if (response.tokenType === "access_token") {
+                    callMSGraph(graphConfig.graphEndpoint, response.accessToken, graphAPICallback);
+                } else {
+                    console.log("token type is:" + response.tokenType);
+                }
+            }
+        }
 
         var myMSALObj = new Msal.UserAgentApplication(msalConfig);
         // Register Callbacks for redirect flow
@@ -401,42 +418,7 @@
         loginbutton.setAttribute('onclick', 'signOut();');
 
     </script>
-<<<<<<< HEAD
-    <<<<<<< HEAD </body> <br>
 
-        =======
-
-        <br></br>
-        >>>>>>> 85a13bd1ce4eda4c61cd4acec6fe67b44ba761cb
-        <center>
-            <footer>
-                <br>
-                <form action="https://paastrial.azurewebsites.net/" method="GET">
-                    <button type="submit" style="font-size: 20px" id="SignOut">Log Out</button>
-                </form>
-                <br>
-            </footer>
-        </center>
-        <<<<<<< HEAD </html>=======<br></br>
-=======
-
-
-<br></br>
-<center>
-    <footer>
-        <br>
-        <form action="https://paastrial.azurewebsites.net/" method="GET">
-            <button type="submit" style="font-size: 20px" id="SignOut">Log Out</button>
-        </form>
-        <br>
-    </footer>
-</center>
-
->>>>>>> 8c89e4ba92c915f06acfe78aa5e48074fb8caba5
 </body>
 
 </html>
-<<<<<<< HEAD
->>>>>>> 85a13bd1ce4eda4c61cd4acec6fe67b44ba761cb
-=======
->>>>>>> 8c89e4ba92c915f06acfe78aa5e48074fb8caba5
