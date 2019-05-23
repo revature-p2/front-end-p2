@@ -64,15 +64,18 @@
                                 Virtual Network Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text"
                                     id="vnetname" name="vnetname"value="" required><br>
                                 CIDR Address Prefixes with mask:&emsp;&emsp;&emsp;<input type="text"
-                                    id="vnetip" name="vnetip" value="" required><br>
+                                    id="vnetip" name="vnetip" pattern="[0-9].{15}+/[0-9].{1}" 
+                                    title="Input must be in CIDR format" value="" required><br>
                                 Private Vnet Subnet Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp13;<input type="text"
                                     id="privatevnetsubnet" name="privatevnetsubnet" value="" required><br>
                                 Private CIDR Address Prefixes with mask:<input type="text"
-                                    id="privatevnetip" name="privatevnetip" value="" required><br>
+                                    id="privatevnetip" name="privatevnetip" pattern="[0-9].{15}+/[0-9].{1}" 
+                                    title="Input must be in CIDR format" value="" required><br>
                                 Public Vnet Subnet Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp13;&emsp13;<input type="text"
                                     id="publicvnetsubnet" name="publicvnetsubnet" value="" required><br>
                                 Public CIDR Address Prefixes with mask:&emsp14;<input type="text"
-                                    id="publicvnetip" name="publicvnetip" value="" required><br>
+                                    id="publicvnetip" name="publicvnetip" pattern="[0-9].{15}+/[0-9].{1}" 
+                                    title="Input must be in CIDR format" value="" required><br>
                                 <input type="button" onclick="Network()" value="Review Network">
                                 <input type="reset">
                                 <br>
@@ -102,7 +105,10 @@
                                 Vnet  Subnet:&emsp;&emsp;&emsp14;<input type="text" id="VMsubnet" name="VMsubnet" value=""
                                     required><br>
                                 Admin Username: <input type="text" id="VMuser" name="VMuser" value="" required><br>
-                                Admin Password:&emsp14; <input type="password" id="VMpassword" name="VMpassword" value="" required><br>
+                                Admin Password:&emsp14; <input type="password" id="VMpassword" name="VMpassword"
+                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" 
+                                    value="" required><br>
                                 <input type="button" onclick="VM()" value="Review VM">
                                 <input type="reset"><br>
                                 <input type="text" id="reviewVM" size="50" disabled>
@@ -231,8 +237,10 @@
                                 SQL Server Name:&emsp;&emsp;&emsp;<input type="text" id="sqlserver" name="sqlserver" value=""
                                     required><br>
                                 Server Admin Username: <input type="text" id="sqlusername" name="sqlusername" value="" required><br>
-                                Server Admin Password:&emsp14; <input type="password" id="sqlpassword" name="sqlpassword" value=""
-                                    required><br>
+                                Server Admin Password:&emsp14; <input type="password" id="sqlpassword" name="sqlpassword" 
+                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" 
+                                    value="" required><br>
                                 Database Name:&emsp;&emsp;&emsp;&emsp; <input type="text" id="sqldbname" name="sqldbname" value=""
                                     required><br>
                                 <input type="button" onclick="createSQL()" value="Review SQL Database">
