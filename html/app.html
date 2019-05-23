@@ -62,23 +62,23 @@
                         border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
                                 Virtual Network Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text"
-                                    id="vnetname" value="" required><br>
+                                    id="vnetname" name="vnetname"value="" required><br>
                                 CIDR Address Prefixes:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text"
-                                    id="vnetip" value="" required><br>
+                                    id="vnetip" name="vnetip" value="" required><br>
                                 CIDR Address Prefixes Mask:&emsp;&emsp;&emsp;&emsp;&emsp13;<input type="number"
-                                    id="vnetmask" value="" required><br>
+                                    id="vnetmask" name="vnetmask" value="" required><br>
                                 Private Vnet Subnet Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp13;<input type="text"
-                                    id="privatevnetsubnet" value="" required><br>
+                                    id="privatevnetsubnet" name="privatevnetsubnet" value="" required><br>
                                 Private CIDR Address Prefixes:&emsp;&emsp;&emsp;&emsp13;<input type="text"
-                                    id="privatevnetip" value="" required><br>
+                                    id="privatevnetip" name="privatevnetip" value="" required><br>
                                 Private CIDR Address Prefixes Mask:&emsp13;&emsp13;<input type="number"
-                                    id="privatevnetmask" value="" required><br>
+                                    id="privatevnetmask" name="privatevnetmask" value="" required><br>
                                 Public Vnet Subnet Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp13;&emsp13;<input type="text"
-                                    id="publicvnetsubnet" value="" required><br>
+                                    id="publicvnetsubnet" name="publicvnetsubnet" value="" required><br>
                                 Public CIDR Address Prefixes:&emsp13;&emsp;&emsp;&emsp;&emsp13;<input type="text"
-                                    id="publicvnetip" value="" required><br>
+                                    id="publicvnetip" name="publicvnetip" value="" required><br>
                                 Public CIDR Address Prefixes Mask:&emsp;<input type="number" id="publicvnetmask"
-                                    value="" required><br>
+                                    name="publicvnetmask" value="" required><br>
                                 <input type="button" onclick="Network()" value="Review Network">
                                 <input type="reset">
                                 <br>
@@ -101,12 +101,12 @@
                         <p class="content" style="background-color: #ffffff;
                         border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
-                                VM name:&emsp;&emsp;&emsp;&emsp14;&emsp14;<input type="text" id="VMname" value=""
+                                VM name:&emsp;&emsp;&emsp;&emsp14;&emsp14;<input type="text" id="VMname" name="VMname" value=""
                                     required><br>
-                                Attached Vnet:&emsp;&emsp14;&emsp14;<input type="text" id="VMnetwork" value=""
+                                Attached Vnet:&emsp;&emsp14;&emsp14;<input type="text" id="VMnetwork" name="VMnetwork" value=""
                                     required><br>
-                                Admin Username: <input type="text" id="VMuser" value="" required><br>
-                                Admin Password:&emsp14; <input type="password" id="VMpassword" value="" required><br>
+                                Admin Username: <input type="text" id="VMuser" name="VMuser" value="" required><br>
+                                Admin Password:&emsp14; <input type="password" id="VMpassword" name="VMpassword" value="" required><br>
                                 <input type="button" onclick="VM()" value="Review VM">
                                 <input type="reset"><br>
                                 <input type="text" id="reviewVM" size="50" disabled>
@@ -127,12 +127,12 @@
                         <p class="content" style="background-color: #ffffff;
                         border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
-                                <select id="dirAction" required>
+                                <select id="dirAction" name="dirAction" required>
                                     <option value=""> ---Please Select an Action---</option>
                                     <option value="create">Create User</option>
                                     <option value="delete">Delete User</option>
                                 </select><br>
-                                Enter Username: <input type="text" id="dirUsername" value="" required><br>
+                                Enter Username: <input type="text" id="dirUsername" name="dirUsername" value="" required><br>
                                 <input type="button" onclick="userDir()" value="Review Directory">
                                 <input type="reset">
                                 <br>
@@ -154,13 +154,13 @@
                         <p class="content" style="background-color: #ffffff;
                             border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
-                                <select id="roleAction" required>
+                                <select id="roleAction" name="roleAction" required>
                                     <option value=""> ---Please Select an Action---</option>
                                     <option value="assign">Assing Role</option>
                                     <option value="delete">Delete Role</option>
                                 </select><br>
-                                Enter Username: <input type="text" id="roleUsername" value="" required><br>
-                                Enter Role: &emsp;&emsp;&emsp13;<input type="text" id="roleType" value=""><br>
+                                Enter Username: <input type="text" id="roleUsername" name="roleUsername" value="" required><br>
+                                Enter Role: &emsp;&emsp;&emsp13;<input type="text" id="roleType" name="roleType" value=""><br>
                                 <input type="button" onclick="dirRoles()" value="Review Directory Roles">
                                 <input type="reset">
                                 <br>
@@ -182,8 +182,8 @@
                         <p class="content" style="background-color: #ffffff;
                         border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
-                                WebApp Name: <input type="text" id="webappname" value="" required><br>
-                                WebApp Plan: &emsp13;&emsp13;<input type="text" id="webappplan" value="" required><br>
+                                WebApp Name: <input type="text" id="webappname" name="webappname" value="" required><br>
+                                WebApp Plan: &emsp13;&emsp13;<input type="text" id="webappplan" name="webappplan" value="" required><br>
                                 <input type="button" onclick="webApp()" value="Review WebApp">
                                 <input type="reset">
                                 <br>
@@ -205,7 +205,7 @@
                         <p class="content" style="background-color: #ffffff;
                         border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
-                                Storage Name: <input type="text" id="storagename" value="" required><br>
+                                Storage Name: <input type="text" id="storagename" name="storagename" value="" required><br>
                                 <input type="button" onclick="storageCreate()" value="Review Storage">
                                 <input type="reset">
                                 <br>
@@ -227,12 +227,12 @@
                         <p class="content" style="background-color: #ffffff;
                         border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
-                                SQL Server Name:&emsp;&emsp;&emsp;<input type="text" id="sqlserver" value=""
+                                SQL Server Name:&emsp;&emsp;&emsp;<input type="text" id="sqlserver" name="sqlserver" value=""
                                     required><br>
-                                Server Admin Username: <input type="text" id="sqlusername" value="" required><br>
-                                Server Admin Password:&emsp14; <input type="password" id="sqlpassword" value=""
+                                Server Admin Username: <input type="text" id="sqlusername" name="sqlusername" value="" required><br>
+                                Server Admin Password:&emsp14; <input type="password" id="sqlpassword" name="sqlpassword" value=""
                                     required><br>
-                                Database Name:&emsp;&emsp;&emsp;&emsp; <input type="text" id="sqldbname" value=""
+                                Database Name:&emsp;&emsp;&emsp;&emsp; <input type="text" id="sqldbname" name="sqldbname" value=""
                                     required><br>
                                 <input type="button" onclick="createSQL()" value="Review SQL Database">
                                 <input type="reset">
@@ -257,11 +257,11 @@
                         border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
                                 CosmosDB Account Name:&emsp13;&emsp14;&emsp14;<input type="text" id="cosmosaccount"
-                                    value="" required><br>
+                                    name="cosmosaccount" value="" required><br>
                                 CosmosDB Name:&emsp;&emsp;&emsp;&emsp;&emsp13; <input type="text" id="cosmosdbname"
+                                    name="cosmosdbname" value="" required><br>
+                                CosmosDB Collection Name:<input type="password" id="cosmosdbcollection" name="cosmosdbcollection" 
                                     value="" required><br>
-                                CosmosDB Collection Name:<input type="password" id="cosmosdbcollection" value=""
-                                    required><br>
                                 <input type="button" onclick="createKosmos()" value="Review CosmosDB">
                                 <input type="reset">
                                 <br>
