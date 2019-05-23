@@ -42,67 +42,48 @@
                 </strong>
                 <h0>_______________________________________________________________ </h0>
 
-                <!-- Private Network -->
-                <form action="" method="GET">
-                    Build a Private Network
-                    <div class="createprivatenetwork">
-                        <span class="collapsible">Build Private Network</span>
+                <!-- Network -->
+                <form action="/network" method="GET">
+                    Build a Network
+                    <div class="createnetwork">
+                        <span class="collapsible">Build Network</span>
                         <p class="content" style="background-color: #ffffff;
                         border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
-                                Private Vnet Name:&emsp13;&emsp;&emsp;&emsp;&emsp;<input type="text"
-                                    id="privatevnetname" value="" required><br>
-                                CIDR Address Prefixes:&emsp13;&emsp13;&emsp;&emsp;<input type="text" id="privatevnetip"
+                                Virtual Network Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text" id="vnetname"
                                     value="" required><br>
-                                CIDR Address Prefixes Mask:<input type="number" id="privatevnetmask" value=""
+                                CIDR Address Prefixes:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text" id="vnetip" value=""
                                     required><br>
-                                Private Vnet Subnet Name:&emsp13;&emsp13;&emsp13;&emsp13;<input type="text"
+                                CIDR Address Prefixes Mask:&emsp;&emsp;&emsp;&emsp;&emsp13;<input type="number" id="vnetmask" value=""
+                                    required><br>
+                                Private Vnet Subnet Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp13;<input type="text"
                                     id="privatevnetsubnet" value="" required><br>
-                                <input type="button" onclick="privateNetwork()" value="Review Private Network">
+                                Private CIDR Address Prefixes:&emsp;&emsp;&emsp;&emsp13;<input type="text" id="privatevnetip"
+                                    value="" required><br>
+                                Private CIDR Address Prefixes Mask:&emsp13;&emsp13;<input type="number" id="privatevnetmask" value=""
+                                    required><br>
+                                Public Vnet Subnet Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp13;&emsp13;<input type="text"
+                                    id="publicvnetsubnet" value="" required><br>
+                                Public CIDR Address Prefixes:&emsp13;&emsp;&emsp;&emsp;&emsp13;<input type="text"
+                                    id="publicvnetip" value="" required><br>
+                                Public CIDR Address Prefixes Mask:&emsp;<input type="number" id="publicvnetmask" value=""
+                                    required><br>
+                                <input type="button" onclick="Network()" value="Review Network">
                                 <input type="reset">
                                 <br>
-                                <input type="text" id="reviewprivatenetwork" size="50" disabled>
+                                <input type="text" id="reviewnetwork" size="80" disabled>
                                 <br>
                                 <h0>__________________________________________________________________
                                 </h0>
                                 <br>
-                                <input type="submit" value="Create Private Network">
-                            </form>
-                        </p>
-                    </div>
-                </form>
-
-                <!-- Public Network -->
-                <form action="" method="GET">
-                    Build a Public Network
-                    <div class="createpublicnetwork">
-                        <span class="collapsible">Build Public Network</span>
-                        <p class="content" style="background-color: #ffffff;
-                        border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
-                            <form action="">
-                                Public Vnet Name:&emsp13;&emsp13;&emsp;&emsp;&emsp;&emsp;<input type="text"
-                                    id="publicvnetname" value="" required><br>
-                                CIDR Address Prefixes:&emsp13;&emsp13;&emsp;&emsp;<input type="text" id="publicvnetip"
-                                    value="" required><br>
-                                CIDR Address Prefixes Mask:<input type="number" id="publicvnetmask" value=""
-                                    required><br>
-                                Public Vnet Subnet Name:&emsp13;&emsp13;&emsp;<input type="text" id="publicvnetsubnet"
-                                    value="" required><br>
-                                <input type="button" onclick="publicNetwork()" value="Review Public Network">
-                                <input type="reset">
-                                <br>
-                                <input type="text" id="reviewPublicnetwork" size="50" disabled>
-                                <br>
-                                <h0>__________________________________________________________________ </h0>
-                                <br>
-                                <input type="submit" value="Create Public Network">
+                                <input type="submit" value="Create Network">
                             </form>
                         </p>
                     </div>
                 </form>
 
                 <!--VM -->
-                <form action="" method="GET">
+                <form action="/createvm" method="GET">
                     Build a Virtual Machine
                     <div class="createvm">
                         <span class="collapsible">Build VM</span>
@@ -128,7 +109,7 @@
                 </form>
 
                 <!-- Directory Users -->
-                <form action="" method="GET">
+                <form action="/users" method="GET">
                     Update Directory Users
                     <div class="createdir">
                         <span class="collapsible">Update directory Users</span>
@@ -137,8 +118,8 @@
                             <form action="">
                                 <select id="dirAction" required>
                                     <option value=""> ---Please Select an Action---</option>
-                                    <option value="Create User">Create User</option>
-                                    <option value="Delete User">Delete User</option>
+                                    <option value="create">Create User</option>
+                                    <option value="delete">Delete User</option>
                                 </select><br>
                                 Enter Username: <input type="text" id="dirUsername" value="" required><br>
                                 <input type="button" onclick="userDir()" value="Review Directory">
@@ -155,7 +136,7 @@
                 </form>
 
                 <!-- Directory Roles -->
-                <form action="" method="GET">
+                <form action="/roles" method="GET">
                     Update Directory Roles
                     <div class="dirroles">
                         <span class="collapsible">Update directory Roles</span>
@@ -164,8 +145,8 @@
                             <form action="">
                                 <select id="roleAction" required>
                                     <option value=""> ---Please Select an Action---</option>
-                                    <option value="Assign Role">Assing Role</option>
-                                    <option value="Delete Role">Delete Role</option>
+                                    <option value="assign">Assing Role</option>
+                                    <option value="delete">Delete Role</option>
                                 </select><br>
                                 Enter Username: <input type="text" id="roleUsername" value="" required><br>
                                 Enter Role: &emsp;&emsp;&emsp13;<input type="text" id="roleType" value=""><br>
@@ -183,7 +164,7 @@
                 </form>
 
                 <!-- Web App -->
-                <form action="" method="GET">
+                <form action="/webapp" method="GET">
                     Build a Web App
                     <div class="createwebapp">
                         <span class="collapsible">Build Webapp</span>
@@ -206,7 +187,7 @@
                 </form>
 
                 <!-- Blod Storage -->
-                <form action="" method="GET">
+                <form action="/blob" method="GET">
                     Build Blob Storage
                     <div class="createblob">
                         <span class="collapsible">Build Storage</span>
@@ -228,7 +209,7 @@
                 </form>
 
                 <!-- SQL Database -->
-                <form action="" method="GET">
+                <form action="sqldb" method="GET">
                     Build a SQL database
                     <div class="createsql">
                         <span class="collapsible">Build MySQL-DB</span>
@@ -257,7 +238,7 @@
                 </form>
 
                 <!-- Kosmos DB -->
-                <form action="" method="GET">
+                <form action="cosmos" method="GET">
                     Build a Cosmos Database
                     <div class="createcosmosDB">
                         <span class="collapsible">Build CosmosDB</span>
@@ -284,7 +265,7 @@
                 </form>
             </h1>
         </center>
-<button type="submit" style="font-size: 20px" id="SignOut">Log Out</button>
+        <button type="submit" style="font-size: 20px" id="SignOut">Log Out</button>
     </div>
 
     <h0>________________________________________________________________________________________________________________________________________________________________________
@@ -307,22 +288,18 @@
             });
         }
 
-        //Create Private Network
-        function privateNetwork() {
-            var a = document.getElementById("privatevnetname").value;
-            var b = document.getElementById("privatevnetip").value;
-            var c = document.getElementById("privatevnetmask").value;
+        //Create Network
+        function Network() {
+            var a = document.getElementById("vnetname").value;
+            var b = document.getElementById("vnetip").value;
+            var c = document.getElementById("vnetmask").value;
             var d = document.getElementById("privatevnetsubnet").value;
-            document.getElementById("reviewprivatenetwork").value = 'You want a Private Network with:' + [a, b, c, d];
-        }
-
-        //Create Public Network
-        function publicNetwork() {
-            var a = document.getElementById("publicvnetname").value;
-            var b = document.getElementById("publicvnetip").value;
-            var c = document.getElementById("publicvnetmask").value;
-            var d = document.getElementById("publicvnetsubnet").value;
-            document.getElementById("reviewPublicnetwork").value = 'You want a Public Network with:' + [a, b, c, d];
+            var e = document.getElementById("privatevnetip").value;
+            var f = document.getElementById("privatevnetmask").value;
+            var g = document.getElementById("publicvnetsubnet").value;
+            var h = document.getElementById("publicvnetip").value;
+            var i = document.getElementById("publicvnetmask").value;
+            document.getElementById("reviewnetwork").value = 'You want a Network with:' + [a, b, c, d, e, f, g, h, i];
         }
 
         //Create VM 
@@ -379,8 +356,6 @@
             document.getElementById("reviewCosmosDB").value = 'You want to create a Cosmos Database with:' + [a, b, c];
         }
 
-
-
         // Create Sign Out
         var msalConfig = {//4695b616-04cf-4063-a769-ab51fd8a88fd tenant ID
             token: 'H7:3kRY0+.=y5v3]iRBNq1l_qar[43Zc',
@@ -413,27 +388,23 @@
         loginbutton.setAttribute('onclick', 'signOut();');
 
     </script>
-<<<<<<< HEAD
-</body>
-<br>
+    <<<<<<< HEAD </body> <br>
 
-=======
+        =======
 
-<br></br>
->>>>>>> 85a13bd1ce4eda4c61cd4acec6fe67b44ba761cb
-<center>
-    <footer>
-        <br>
-        <form action="https://paastrial.azurewebsites.net/" method="GET">
-            <button type="submit" style="font-size: 20px" id="SignOut">Log Out</button>
-        </form>
-        <br>
-    </footer>
-</center>
-<<<<<<< HEAD
-</html>
-=======
-<br></br>
+        <br></br>
+        >>>>>>> 85a13bd1ce4eda4c61cd4acec6fe67b44ba761cb
+        <center>
+            <footer>
+                <br>
+                <form action="https://paastrial.azurewebsites.net/" method="GET">
+                    <button type="submit" style="font-size: 20px" id="SignOut">Log Out</button>
+                </form>
+                <br>
+            </footer>
+        </center>
+        <<<<<<< HEAD </html>=======<br></br>
 </body>
+
 </html>
 >>>>>>> 85a13bd1ce4eda4c61cd4acec6fe67b44ba761cb
