@@ -213,6 +213,7 @@
                         border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
                                 Storage Name: <input type="text" id="storagename" name="storagename" value="" required><br>
+                                Container Name: <input type="text" id="containername" name="containername" value="" required><br>
                                 <input type="button" onclick="storageCreate()" value="Review Storage">
                                 <input type="reset">
                                 <br>
@@ -359,7 +360,8 @@
         //Blod Storage
         function storageCreate() {
             var a = document.getElementById("storagename").value;
-            document.getElementById("reviewStorage").value = 'You want to create Blob Storage with Name:' + [a];
+            var b = document.getElementById("containername").value;
+            document.getElementById("reviewStorage").value = 'You want to create Blob Storage with Name:' + [a,b];
         }
 
         //Create an SQL Database
