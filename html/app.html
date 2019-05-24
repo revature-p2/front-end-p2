@@ -423,6 +423,7 @@
             }
         }
 
+        
 
         var myMSALObj = new Msal.UserAgentApplication(msalConfig);
         // Register Callbacks for redirect flow
@@ -431,7 +432,23 @@
         if (! myMSALObj.getAccount().userName){
             window.location.replace("https://paastrial.azurewebsites.net/")
         }
-
+function acquireTokenPopupAndCallMSGraph() {
+    //Always start with acquireTokenSilent to obtain a token in the signed in user from cache
+    myMSALObj.acquireTokenSilent(requestObj).then(function (tokenResponse) {
+        callMSGraph(graphConfig.graphMeEndpoint, tokenResponse.accessToken, graphAPICallback);
+    }).catch(function (error) {
+        console.log(error);
+        // Upon acquireTokenSilent failure (due to consent or interaction or login required ONLY)
+        // Call acquireTokenPopup(popup window)
+        if (requiresInteraction(error.errorCode)) {
+            myMSALObj.acquireTokenPopup(requestObj).then(function (tokenResponse) {
+                callMSGraph(graphConfig.graphMeEndpoint, tokenResponse.accessToken, graphAPICallback);
+            }).catch(function (error) {
+                console.log(error);
+            });
+        }
+    });
+}
 
         function signOut() {
             myMSALObj.logout();
