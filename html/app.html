@@ -111,7 +111,7 @@
                                     value="" required><br>
                                 <input type="button" onclick="VM()" value="Review VM">
                                 <input type="reset"><br>
-                                <input type="text" id="reviewVM" size="50" disabled>
+                                <input type="text" id="reviewvm" size="50" disabled>
                                 <br>
                                 <h0>__________________________________________________________________ </h0>
                                 <br>
@@ -258,7 +258,7 @@
                     </div>
                 </form>
 
-                <!-- Kosmos DB -->
+                <!-- Kos-mos DB -->
                 <form action="/cosmos" method="GET">
                     Build a Cosmos Database
                     <div class="createcosmosDB">
@@ -275,7 +275,7 @@
                                 <input type="button" onclick="createKosmos()" value="Review CosmosDB">
                                 <input type="reset">
                                 <br>
-                                <input type="text" id="reviewCosmosDB" size="75" disabled>
+                                <input type="text" id="reviewCosmosDB" size="80" disabled>
                                 <br>
                                 <h0>__________________________________________________________________ </h0>
                                 <br>
@@ -332,7 +332,7 @@
             var b = document.getElementById("VMnetwork").value;
             var c = document.getElementById("VMuser").value;
             var d = document.getElementById("VMpassword").value;
-            document.getElementById("reviewVM").value = 'You want a VM with:' + [a, b, c, d];
+            document.getElementById("reviewvm").value = 'You want a VM with:' + [a, b, c, d];
         }
 
         //Update Directory Users
