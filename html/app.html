@@ -52,50 +52,49 @@
                     OUR Chicken Cloud Services
                 </strong>
                 <div>
-                 Enter Your Name:&emsp;&emsp14;<input type="text" id="rgroup" name="rgroup" value=""
-                  required>
-                <input type="submit" id="rgroupbut" value="Submit your name!"></div>
-            <form action="/creatergroup">
+                    Enter Your Name:&emsp;&emsp14;<input type="text" id="rgroup" name="rgroup" value="" required>
+                    <input type="submit" id="rgroupbut" value="Submit your name!"></div>
+                <form action="/creatergroup">
                 </form>
                 <h0>_______________________________________________________________ </h0>
-                 
+
                 <!-- Network -->
-               <div>      
-                <form action="/network" method="GET">
-                    Build a Network
-                </div>     
-                    <div class="createnetwork">
-                        <span class="collapsible">Build Network</span>
-                        <p class="content" style="background-color: #ffffff;
+                <div>
+                    <form action="/network" method="GET">
+                        Build a Network
+                </div>
+                <div class="createnetwork">
+                    <span class="collapsible">Build Network</span>
+                    <p class="content" style="background-color: #ffffff;
                         border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
-                            <form action="">
-                                Virtual Network Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text"
-                                    id="vnetname" name="vnetname"value="" required><br>
-                                CIDR Address Prefixes with mask:&emsp;&emsp;&emsp;<input type="text"
-                                    id="vnetip" name="vnetip" pattern="[0-9].{15}+/[0-9].{1}" 
-                                    title="Input must be in CIDR format" value="" required><br>
-                                Private Vnet Subnet Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp13;<input type="text"
-                                    id="privatevnetsubnet" name="privatevnetsubnet" value="" required><br>
-                                Private CIDR Address Prefixes with mask:<input type="text"
-                                    id="privatevnetip" name="privatevnetip" pattern="[0-9].{15}+/[0-9].{1}" 
-                                    title="Input must be in CIDR format" value="" required><br>
-                                Public Vnet Subnet Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp13;&emsp13;<input type="text"
-                                    id="publicvnetsubnet" name="publicvnetsubnet" value="" required><br>
-                                Public CIDR Address Prefixes with mask:&emsp14;<input type="text"
-                                    id="publicvnetip" name="publicvnetip" pattern="[0-9].{15}+/[0-9].{1}" 
-                                    title="Input must be in CIDR format" value="" required><br>
-                                <input type="button" onclick="Network()" value="Review Network">
-                                <input type="reset">
-                                <br>
-                                <input type="text" id="reviewnetwork" size="150" disabled>
-                                <br>
-                                <h0>__________________________________________________________________
-                                </h0>
-                                <br>
-                                <input type="submit" value="Create Network">
-                            </form>
-                        </p>
-                    </div>
+                        <form action="">
+                            Virtual Network Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text"
+                                id="vnetname" name="vnetname" value="" required><br>
+                            CIDR Address Prefixes with mask:&emsp;&emsp;&emsp;<input type="text" id="vnetip"
+                                name="vnetip" pattern="[0-9].{15}+/[0-9].{1}" title="Input must be in CIDR format"
+                                value="" required><br>
+                            Private Vnet Subnet Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp13;<input type="text"
+                                id="privatevnetsubnet" name="privatevnetsubnet" value="" required><br>
+                            Private CIDR Address Prefixes with mask:<input type="text" id="privatevnetip"
+                                name="privatevnetip" pattern="[0-9].{15}+/[0-9].{1}"
+                                title="Input must be in CIDR format" value="" required><br>
+                            Public Vnet Subnet Name:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp13;&emsp13;<input
+                                type="text" id="publicvnetsubnet" name="publicvnetsubnet" value="" required><br>
+                            Public CIDR Address Prefixes with mask:&emsp14;<input type="text" id="publicvnetip"
+                                name="publicvnetip" pattern="[0-9].{15}+/[0-9].{1}" title="Input must be in CIDR format"
+                                value="" required><br>
+                            <input type="button" onclick="Network()" value="Review Network">
+                            <input type="reset">
+                            <br>
+                            <input type="text" id="reviewnetwork" size="150" disabled>
+                            <br>
+                            <h0>__________________________________________________________________
+                            </h0>
+                            <br>
+                            <input type="submit" value="Create Network">
+                        </form>
+                    </p>
+                </div>
                 </form>
 
                 <!--VM -->
@@ -106,16 +105,16 @@
                         <p class="content" style="background-color: #ffffff;
                         border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
-                                VM name:&emsp;&emsp;&emsp;&emsp14;&emsp14;<input type="text" id="VMname" name="VMname" value=""
-                                    required><br>
-                                Attached Vnet:&emsp;&emsp14;&emsp14;<input type="text" id="VMnetwork" name="VMnetwork" value=""
-                                    required><br>
-                                Vnet  Subnet:&emsp;&emsp;&emsp14;<input type="text" id="VMsubnet" name="VMsubnet" value=""
-                                    required><br>
+                                VM name:&emsp;&emsp;&emsp;&emsp14;&emsp14;<input type="text" id="VMname" name="VMname"
+                                    value="" required><br>
+                                Attached Vnet:&emsp;&emsp14;&emsp14;<input type="text" id="VMnetwork" name="VMnetwork"
+                                    value="" required><br>
+                                Vnet Subnet:&emsp;&emsp;&emsp14;<input type="text" id="VMsubnet" name="VMsubnet"
+                                    value="" required><br>
                                 Admin Username: <input type="text" id="VMuser" name="VMuser" value="" required><br>
                                 Admin Password:&emsp14; <input type="password" id="VMpassword" name="VMpassword"
-                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-                                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" 
+                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                                     value="" required><br>
                                 <input type="button" onclick="VM()" value="Review VM">
                                 <input type="reset"><br>
@@ -142,7 +141,8 @@
                                     <option value="create">Create User</option>
                                     <option value="delete">Delete User</option>
                                 </select><br>
-                                Enter Username: <input type="text" id="dirUsername" name="dirUsername" value="" required><br>
+                                Enter Username: <input type="text" id="dirUsername" name="dirUsername" value=""
+                                    required><br>
                                 <input type="button" onclick="userDir()" value="Review Directory">
                                 <input type="reset">
                                 <br>
@@ -175,7 +175,8 @@
                                     <option value="contributor">Contributor Role</option>
                                     <option value="owner">Administrator Role</option>
                                 </select><br>
-                                Enter Username: <input type="text" id="roleUsername" name="roleUsername" value="" required><br>
+                                Enter Username: <input type="text" id="roleUsername" name="roleUsername" value=""
+                                    required><br>
                                 <input type="button" onclick="dirRoles()" value="Review Directory Roles">
                                 <input type="reset">
                                 <br>
@@ -198,7 +199,8 @@
                         border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
                                 WebApp Name: <input type="text" id="webappname" name="webappname" value="" required><br>
-                                Git Repository: &emsp13;&emsp13;<input type="text" id="gitrepo" name="gitrepo" value="" required><br>
+                                Git Repository: &emsp13;&emsp13;<input type="text" id="gitrepo" name="gitrepo" value=""
+                                    required><br>
                                 <input type="button" onclick="webApp()" value="Review WebApp">
                                 <input type="reset">
                                 <br>
@@ -220,8 +222,10 @@
                         <p class="content" style="background-color: #ffffff;
                         border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
-                                Storage Name: <input type="text" id="storagename" name="storagename" value="" required><br>
-                                Container Name: <input type="text" id="containername" name="containername" value="" required><br>
+                                Storage Name: <input type="text" id="storagename" name="storagename" value=""
+                                    required><br>
+                                Container Name: <input type="text" id="containername" name="containername" value=""
+                                    required><br>
                                 <input type="button" onclick="storageCreate()" value="Review Storage">
                                 <input type="reset">
                                 <br>
@@ -243,15 +247,16 @@
                         <p class="content" style="background-color: #ffffff;
                         border: 1px solid black; opacity: 0.5; margin: 50px; color: black; font-size: 20px">
                             <form action="">
-                                SQL Server Name:&emsp;&emsp;&emsp;<input type="text" id="sqlserver" name="sqlserver" value=""
-                                    required><br>
-                                Server Admin Username: <input type="text" id="sqlusername" name="sqlusername" value="" required><br>
-                                Server Admin Password:&emsp14; <input type="password" id="sqlpassword" name="sqlpassword" 
-                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-                                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" 
+                                SQL Server Name:&emsp;&emsp;&emsp;<input type="text" id="sqlserver" name="sqlserver"
                                     value="" required><br>
-                                Database Name:&emsp;&emsp;&emsp;&emsp; <input type="text" id="sqldbname" name="sqldbname" value=""
+                                Server Admin Username: <input type="text" id="sqlusername" name="sqlusername" value=""
                                     required><br>
+                                Server Admin Password:&emsp14; <input type="password" id="sqlpassword"
+                                    name="sqlpassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                                    value="" required><br>
+                                Database Name:&emsp;&emsp;&emsp;&emsp; <input type="text" id="sqldbname"
+                                    name="sqldbname" value="" required><br>
                                 <input type="button" onclick="createSQL()" value="Review SQL Database">
                                 <input type="reset">
                                 <br>
@@ -278,8 +283,8 @@
                                     name="cosmosaccount" value="" required><br>
                                 CosmosDB Name:&emsp;&emsp;&emsp;&emsp;&emsp13; <input type="text" id="cosmosdbname"
                                     name="cosmosdbname" value="" required><br>
-                                CosmosDB Collection Name:<input type="text" id="cosmosdbcollection" name="cosmosdbcollection" 
-                                    value="" required><br>
+                                CosmosDB Collection Name:<input type="text" id="cosmosdbcollection"
+                                    name="cosmosdbcollection" value="" required><br>
                                 <input type="button" onclick="createKosmos()" value="Review CosmosDB">
                                 <input type="reset">
                                 <br>
@@ -298,10 +303,10 @@
     <h0>________________________________________________________________________________________________________________________________________________________________________
     </h0><br>
     <center>
-    <footer><br>
+        <footer><br>
             <button type="button" style="font-size: 20px" id="SignOut">Log Out</button>
             <br>
-    </footer>
+        </footer>
     </center>
 
     <!-- Javascript -->
@@ -367,7 +372,7 @@
         function storageCreate() {
             var a = document.getElementById("storagename").value;
             var b = document.getElementById("containername").value;
-            document.getElementById("reviewStorage").value = 'You want to create Blob Storage with Name:' + [a,b];
+            document.getElementById("reviewStorage").value = 'You want to create Blob Storage with Name:' + [a, b];
         }
 
         //Create an SQL Database
@@ -405,17 +410,17 @@
         var requestObj = {
             scopes: ["user.read"]
         };
-        
+
         function callMSGraph(theUrl, accessToken, callback) {
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200)
-            callback(JSON.parse(this.responseText));
-    }
-    xmlHttp.open("GET", theUrl, true); // true for asynchronous
-    xmlHttp.setRequestHeader('Authorization', 'Bearer ' + accessToken);
-    xmlHttp.send();
-}
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200)
+                    callback(JSON.parse(this.responseText));
+            }
+            xmlHttp.open("GET", theUrl, true); // true for asynchronous
+            xmlHttp.setRequestHeader('Authorization', 'Bearer ' + accessToken);
+            xmlHttp.send();
+        }
 
 
         function authRedirectCallBack(error, response) {
@@ -431,32 +436,32 @@
             }
         }
 
-        
+
 
         var myMSALObj = new Msal.UserAgentApplication(msalConfig);
         // Register Callbacks for redirect flow
         myMSALObj.handleRedirectCallback(authRedirectCallBack);
 
-        if (! myMSALObj.getAccount().userName){
+        if (!myMSALObj.getAccount().userName) {
             window.location.replace("https://paastrial.azurewebsites.net/")
         }
-function acquireTokenPopupAndCallMSGraph() {
-    //Always start with acquireTokenSilent to obtain a token in the signed in user from cache
-    myMSALObj.acquireTokenSilent(requestObj).then(function (tokenResponse) {
-        callMSGraph(graphConfig.graphMeEndpoint, tokenResponse.accessToken, graphAPICallback);
-    }).catch(function (error) {
-        console.log(error);
-        // Upon acquireTokenSilent failure (due to consent or interaction or login required ONLY)
-        // Call acquireTokenPopup(popup window)
-        if (requiresInteraction(error.errorCode)) {
-            myMSALObj.acquireTokenPopup(requestObj).then(function (tokenResponse) {
+        function acquireTokenPopupAndCallMSGraph() {
+            //Always start with acquireTokenSilent to obtain a token in the signed in user from cache
+            myMSALObj.acquireTokenSilent(requestObj).then(function (tokenResponse) {
                 callMSGraph(graphConfig.graphMeEndpoint, tokenResponse.accessToken, graphAPICallback);
             }).catch(function (error) {
                 console.log(error);
+                // Upon acquireTokenSilent failure (due to consent or interaction or login required ONLY)
+                // Call acquireTokenPopup(popup window)
+                if (requiresInteraction(error.errorCode)) {
+                    myMSALObj.acquireTokenPopup(requestObj).then(function (tokenResponse) {
+                        callMSGraph(graphConfig.graphMeEndpoint, tokenResponse.accessToken, graphAPICallback);
+                    }).catch(function (error) {
+                        console.log(error);
+                    });
+                }
             });
         }
-    });
-}
 
         function signOut() {
             myMSALObj.logout();
