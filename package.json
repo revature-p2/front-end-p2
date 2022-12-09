@@ -19,7 +19,7 @@
   "homepage": "https://github.com/revature-p2/front-end-p2#readme",
   "dependencies": {
     "azure": "^2.3.1-preview",
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "html": "^1.0.0",
     "nodemon": "^1.19.0"
   }
